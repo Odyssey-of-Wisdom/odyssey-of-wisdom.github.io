@@ -9,52 +9,46 @@ const Navbar = () => {
   return (
     <AppBar
       position="sticky"
-      elevation={6}
+      elevation={4}
       sx={{
         backgroundColor: '#17313E',
-        px: { xs: 3, md: 6 },
-        py: 1.25,
-        boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
-        backdropFilter: 'saturate(180%) blur(8px)',
+        px: { xs: 2, md: 6 },
+        py: { xs: 0.5, md: 0.75 },
+        boxShadow: '0 2px 12px rgba(0,0,0,0.3)',
+        backdropFilter: 'saturate(180%) blur(6px)',
       }}
     >
-      <Toolbar
-        sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          gap: 3,
-          maxWidth: 1200,
-          mx: 'auto',
-        }}
-      >
+      <Toolbar disableGutters sx={{ display: 'flex', alignItems: 'center', height: { xs: 56, md: 64 } }}>
         <Box
-          display="flex"
-          alignItems="center"
-          gap={2}
+          onClick={() => scrollTo('home')}
           sx={{
             cursor: 'pointer',
+            ml: { xs: 1, md: 2 },
             transition: 'transform 0.3s ease',
-            '&:hover': {
-              transform: 'scale(1.05) rotate(-3deg)',
-            },
+            '&:hover': { transform: 'scale(1.05) rotate(-3deg)' },
           }}
-          onClick={() => scrollTo('home')}
         >
-          <img
+          <Box
+            component="img"
             src={Logo}
-            alt="Logo"
-            style={{
-              height: 60,
-              userSelect: 'none',
+            alt="Odyssey Logo"
+            sx={{
+              height: { xs: 40, md: 50 },
               filter: 'drop-shadow(0 0 4px rgba(255,255,255,0.2))',
-              borderRadius: 8,
+              borderRadius: 1,
+              userSelect: 'none',
             }}
           />
         </Box>
 
-        <Box display="flex" gap={4} flexWrap="wrap">
+        <Box sx={{ flexGrow: 1 }} />
+
+        <Box
+          sx={{
+            display: 'flex',
+            gap: { xs: 3, md: 5 },
+          }}
+        >
           {['about', 'projects', 'feedback'].map((id) => (
             <Button
               key={id}
@@ -62,18 +56,17 @@ const Navbar = () => {
               sx={{
                 color: '#F3E2D4',
                 textTransform: 'none',
-                fontWeight: 700,
-                letterSpacing: '0.12em',
+                fontWeight: 300,
+                letterSpacing: '0.03em',
                 fontSize: { xs: '1rem', md: '1.1rem' },
-                padding: '8px 16px',
-                borderRadius: 30,
+                px: { xs: 1.5, md: 2 },
+                py: { xs: 0.5, md: 0.75 },
+                borderRadius: '20px',
                 transition: 'all 0.25s ease',
-                boxShadow: '0 0 0 transparent',
                 '&:hover': {
                   backgroundColor: '#415E72',
-                  color: '#F3E2D4',
-                  boxShadow: '0 4px 12px rgba(65, 94, 114, 0.6)',
-                  transform: 'translateY(-2px)',
+                  boxShadow: '0 2px 8px rgba(65,94,114,0.6)',
+                  transform: 'translateY(-1px)',
                 },
               }}
             >
@@ -81,6 +74,8 @@ const Navbar = () => {
             </Button>
           ))}
         </Box>
+
+        <Box sx={{ flexGrow: 1 }} />
       </Toolbar>
     </AppBar>
   )
