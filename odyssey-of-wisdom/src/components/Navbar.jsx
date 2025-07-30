@@ -82,7 +82,7 @@ const Navbar = () => {
             gap: { xs: 2, md: 4 },
           }}
         >
-          {['about', 'projects', 'feedback'].map((id) => (
+          {[{ id: 'about', label: 'About Us' }, { id: 'projects', label: 'Projects' }, { id: 'feedback', label: 'Feedback' }].map(({ id, label }) => (
             <Button
               key={id}
               onClick={() => scrollTo(id)}
@@ -110,7 +110,7 @@ const Navbar = () => {
 				},
 			  }}
             >
-              {id.charAt(0).toUpperCase() + id.slice(1)}
+              {label}
             </Button>
           ))}
         </Box>
