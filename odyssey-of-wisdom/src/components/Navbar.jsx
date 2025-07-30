@@ -25,12 +25,12 @@ const Navbar = () => {
         position: 'relative',
       }}>
         <Box
-          onClick={() => scrollTo('home')}
+          onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}
           sx={{
             cursor: 'pointer',
             ml: { xs: 0.5, md: 1.5 },
             transition: 'transform 0.3s ease',
-            '&:hover': { transform: 'scale(1.1) rotate(-2deg)' },
+            '&:hover': { transform: 'scale(1.45) rotate(-4deg)' },
           }}
         >
           <Box
