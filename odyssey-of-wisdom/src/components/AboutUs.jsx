@@ -6,10 +6,11 @@ const AboutUs = () => (
     position: 'relative',
     py: 10,
     px: { xs: 3, md: 10 },
+	pt: 10,
+    pb: 4,
     background: 'linear-gradient(120deg, #F3E2D4 0%, #EADAE3 100%)',
     color: '#17313E',
   }}>
-    {/* Top wave to connect from Hero */}
     <Box
       component="svg"
       viewBox="0 0 1440 80"
@@ -22,7 +23,6 @@ const AboutUs = () => (
     </Box>
 
     <Box sx={{ position: 'relative', zIndex: 1 }}>
-      {/* Mission & Background */}
       <Typography
         variant="h3"
         sx={{
@@ -64,10 +64,8 @@ const AboutUs = () => (
         Our founders, who grew up in rural Greece, understand the barriers faced by youth in disadvantaged regions. Having participated in Erasmus+ projects across Europe — from Armenia to the Canary Islands — we formed this initiative to help others grow as citizens of the world. We envision Europe as a constellation of youth connected by dialogue, shared values, and personal transformation.
       </Typography>
 
-      {/* Divider */}
       <Divider sx={{ borderColor: '#C5B0CD', mb: 6 }} />
 
-      {/* Vision */}
       <Typography
         variant="h4"
         sx={{
@@ -132,7 +130,6 @@ const AboutUs = () => (
         Our journey begins in Ancient Olympia — a place that symbolizes peace, unity, and culture. From this historic foundation, we’re building a future where young people are equipped with the tools, mindsets, and global exposure to shape a better Europe.
       </Typography>
 
-      {/* Founders */}
       <Typography
         variant="h4"
         sx={{
@@ -212,8 +209,8 @@ const AboutUs = () => (
           </Grid> 
         ))} 
       </Grid> 
-    </Box> 
-  </Box> 
+    </Box>
+  </Box>
 ) 
 
 export default AboutUs

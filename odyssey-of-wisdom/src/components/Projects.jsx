@@ -1,29 +1,102 @@
+import { Box, Typography, Grid, Card, CardMedia, CardContent, Chip, Stack } from '@mui/material'
 import { projects } from '../data/projects'
-import { Grid, Card, CardMedia, CardContent, Typography, Box, Stack } from '@mui/material'
-import LocationOnIcon from '@mui/icons-material/LocationOn'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
+import LocationOnIcon from '@mui/icons-material/LocationOn'
 
 const Projects = () => (
-  <Box id="projects" sx={{ py: 10, px: 4, backgroundColor: '#EADAE3' }}>
-    <Typography variant="h4" textAlign="center" mb={4} color="#17313E">
+  <Box
+    id="projects"
+    sx={{
+      position: 'relative',
+      background: 'linear-gradient(135deg, #EFE6F0 0%, #D4C1D6 100%)',
+      color: '#17313E',
+      py: 12,
+      px: { xs: 3, md: 10 },
+    }}
+  >
+    <Typography
+      variant="h3"
+      sx={{
+        fontWeight: 600,
+        textAlign: 'center',
+        mb: 8,
+        color: '#5A3E61',
+        letterSpacing: '0.5px',
+      }}
+    >
       Our Projects
     </Typography>
-    <Grid container spacing={4}>
-      {projects.map((p) => (
-        <Grid item xs={12} sm={6} md={4} key={p.title}>
-          <Card sx={{ borderRadius: 4 }}>
-            <CardMedia component="img" height="180" image={p.image} alt={p.title} />
-            <CardContent>
-              <Typography variant="h6" mb={1}>{p.title}</Typography>
-              <Stack direction="row" spacing={1} alignItems="center" color="text.secondary" mb={1}>
-                <CalendarMonthIcon fontSize="small" />
-                <Typography variant="body2">{p.date}</Typography>
+
+    <Grid container spacing={6} justifyContent="center">
+      {projects.map((p, index) => (
+        <Grid item xs={12} md={10} sx={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <Card
+            elevation={0}
+            sx={{
+              display: 'flex',
+              flexDirection: index % 2 === 0 ? 'row' : 'row-reverse',
+              borderRadius: 6,
+              overflow: 'hidden',
+              boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
+              backgroundColor: '#FFFFFF',
+            }}
+          >
+            <CardMedia
+              component="img"
+              image={p.image}
+              alt={p.title}
+              sx={{
+                width: { xs: '100%', md: '50%' },
+                height: 320,
+                objectFit: 'cover',
+              }}
+            />
+
+            <CardContent
+              sx={{
+                px: { xs: 3, md: 5 },
+                py: { xs: 4, md: 5 },
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+              }}
+            >
+              <Typography
+                variant="h5"
+                sx={{
+                  fontWeight: 600,
+                  color: '#5A3E61',
+                  mb: 1,
+                }}
+              >
+                {p.title}
+              </Typography>
+
+              <Stack direction="row" spacing={2} mb={2}>
+                <Stack direction="row" spacing={1} alignItems="center">
+                  <CalendarMonthIcon fontSize="small" />
+                  <Typography variant="body2" color="#6E4D74">
+                    {p.date}
+                  </Typography>
+                </Stack>
+                <Stack direction="row" spacing={1} alignItems="center">
+                  <LocationOnIcon fontSize="small" />
+                  <Typography variant="body2" color="#6E4D74">
+                    {p.location}
+                  </Typography>
+                </Stack>
               </Stack>
-              <Stack direction="row" spacing={1} alignItems="center" color="text.secondary">
-                <LocationOnIcon fontSize="small" />
-                <Typography variant="body2">{p.location}</Typography>
-              </Stack>
-              <Typography variant="body2" mt={2}>{p.description}</Typography>
+
+              <Typography
+                variant="body2"
+                sx={{
+                  fontWeight: 300,
+                  color: '#3A2F3B',
+                  lineHeight: 1.7,
+                }}
+              >
+                {p.description}
+              </Typography>
             </CardContent>
           </Card>
         </Grid>
