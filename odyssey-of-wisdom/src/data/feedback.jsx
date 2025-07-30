@@ -1,9 +1,8 @@
 export const feedback = [
   {
-    name: 'Elena',
+    name: 'Temp person',
     quote: 'This was a life-changing experience. Thank you Odyssey!',
-    image: '/assets/feedback/elena.jpg',
-    project: 'Green Europe'
+    image: '',
+    project: 'Temp project'
   },
-  // More feedback
 ]
