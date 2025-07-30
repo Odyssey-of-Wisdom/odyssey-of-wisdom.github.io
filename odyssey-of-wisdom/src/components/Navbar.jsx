@@ -58,7 +58,7 @@ const Navbar = () => {
             cursor: 'pointer',
             ml: { xs: 0.5, md: 1.5 },
             transition: 'transform 0.3s ease',
-            '&:hover': { transform: 'scale(1.45) rotate(-4deg)' },
+            '&:hover': { transform: 'scale(1.15) rotate(-3deg)' },
           }}
         >
           <Box
@@ -66,7 +66,7 @@ const Navbar = () => {
             src={Logo}
             alt="Odyssey Logo"
             sx={{
-              height: { xs: 32, md: 44 },
+              height: { xs: 42, md: 64 },
               filter: 'drop-shadow(0 0 3px rgba(255,255,255,0.15))',
               borderRadius: 1,
             }}
