@@ -72,7 +72,7 @@ const Hero = () => (
       Connecting Greek youth with Erasmus+ opportunities for travel, learning, and cultural exchange across Europe.
     </Typography>
 
-\    <Button
+    <Button
       endIcon={<ExpandMoreIcon />}
       variant="contained"
       size="large"
