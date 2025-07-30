@@ -1,11 +1,39 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { AppBar, Toolbar, Button, Box } from '@mui/material'
 import Logo from '../assets/logo2.png'
+
 
 const Navbar = () => {
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
+
+  const [activeSection, setActiveSection] = useState('')
+
+  useEffect(() => {
+	const handleScroll = () => {
+		if (window.scrollY < 150) {
+			setActiveSection('')
+			return
+		}
+
+		const sections = ['about', 'projects', 'feedback']
+		for (let id of sections) {
+			const el = document.getElementById(id)
+			if (el) {
+			const rect = el.getBoundingClientRect()
+			if (rect.top <= 100 && rect.bottom >= 100) {
+				setActiveSection(id)
+				break
+			}
+		  }
+		}
+	}
+
+	window.addEventListener('scroll', handleScroll)
+	handleScroll()
+	return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <AppBar
@@ -59,28 +87,28 @@ const Navbar = () => {
               key={id}
               onClick={() => scrollTo(id)}
               sx={{
-                position: 'relative',
-                color: '#F3E2D4',
-                textTransform: 'none',
-                fontWeight: 300,
-                fontSize: { xs: '0.95rem', md: '1.25rem' },
-                px: 0,
-                minWidth: 0,
-                '&:after': {
-                  content: '""',
-                  position: 'absolute',
-                  left: 0,
-                  bottom: -1,
-                  width: '0%',
-                  height: '1.5px',
-                  backgroundColor: '#C5B0CD',
-                  transition: 'width 0.3s ease',
-                },
-                '&:hover': {
-                  color: '#C5B0CD',
-                  '&:after': { width: '100%' },
-                },
-              }}
+				position: 'relative',
+				color: activeSection === id ? '#C5B0CD' : '#F3E2D4',
+				textTransform: 'none',
+				fontWeight: 300,
+				fontSize: { xs: '0.95rem', md: '1.25rem' },
+				px: 0,
+				minWidth: 0,
+				'&:after': {
+					content: '""',
+					position: 'absolute',
+					left: 0,
+					bottom: -1,
+					width: activeSection === id ? '100%' : '0%',
+					height: '1.5px',
+					backgroundColor: '#C5B0CD',
+					transition: 'width 0.3s ease',
+				},
+				'&:hover': {
+					color: '#C5B0CD',
+					'&:after': { width: '100%' },
+				},
+			  }}
             >
               {id.charAt(0).toUpperCase() + id.slice(1)}
             </Button>
