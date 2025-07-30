@@ -11,7 +11,7 @@ const Footer = () => (
       <IconButton href="https://www.instagram.com/oddysey_of_wisdom/" target="_blank">
         <InstagramIcon sx={{ color: '#C5B0CD' }} />
       </IconButton>
-      <IconButton href="mailto:contact@odysseyofwisdom.org">
+      <IconButton href="mailto:odysseyofwisdom.greece@gmail.com">
         <MailOutlineIcon sx={{ color: '#C5B0CD' }} />
       </IconButton>
     </Box>
