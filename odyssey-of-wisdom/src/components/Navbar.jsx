@@ -9,23 +9,23 @@ const Navbar = () => {
   return (
     <AppBar
       position="sticky"
-      elevation={4}
+      elevation={0}
       sx={{
-        backgroundColor: '#17313E',
+        backgroundColor: 'rgba(23,49,62,0.85)',     // translucent
+        backdropFilter: 'blur(8px)',
         px: { xs: 2, md: 6 },
-        py: { xs: 0.5, md: 0.75 },
-        boxShadow: '0 2px 12px rgba(0,0,0,0.3)',
-        backdropFilter: 'saturate(180%) blur(6px)',
+        py: { xs: 0.4, md: 0.6 },
       }}
     >
-      <Toolbar disableGutters sx={{ display: 'flex', alignItems: 'center', height: { xs: 56, md: 64 } }}>
+      <Toolbar disableGutters sx={{ display: 'flex', alignItems: 'center', height: { xs:  56 , md:  64 } }}>
+        {/* Logo far left */}
         <Box
           onClick={() => scrollTo('home')}
           sx={{
             cursor: 'pointer',
             ml: { xs: 1, md: 2 },
             transition: 'transform 0.3s ease',
-            '&:hover': { transform: 'scale(1.05) rotate(-3deg)' },
+            '&:hover': { transform: 'scale(1.1) rotate(-2deg)' },
           }}
         >
           <Box
@@ -33,20 +33,25 @@ const Navbar = () => {
             src={Logo}
             alt="Odyssey Logo"
             sx={{
-              height: { xs: 40, md: 50 },
-              filter: 'drop-shadow(0 0 4px rgba(255,255,255,0.2))',
+              height: { xs: 36, md: 48 },
+              filter: 'drop-shadow(0 0 3px rgba(255,255,255,0.2))',
               borderRadius: 1,
               userSelect: 'none',
             }}
           />
         </Box>
 
+        {/* Spacer */}
         <Box sx={{ flexGrow: 1 }} />
 
+        {/* Centered nav */}
         <Box
           sx={{
             display: 'flex',
-            gap: { xs: 3, md: 5 },
+            gap: { xs: 3, md: 6 },
+            position: 'absolute',
+            left: '50%',
+            transform: 'translateX(-50%)',
           }}
         >
           {['about', 'projects', 'feedback'].map((id) => (
@@ -54,19 +59,26 @@ const Navbar = () => {
               key={id}
               onClick={() => scrollTo(id)}
               sx={{
+                position: 'relative',
                 color: '#F3E2D4',
                 textTransform: 'none',
                 fontWeight: 300,
-                letterSpacing: '0.03em',
                 fontSize: { xs: '1rem', md: '1.1rem' },
-                px: { xs: 1.5, md: 2 },
-                py: { xs: 0.5, md: 0.75 },
-                borderRadius: '20px',
-                transition: 'all 0.25s ease',
+                px: 0,
+                minWidth: 0,
+                '&:after': {
+                  content: '""',
+                  position: 'absolute',
+                  left: 0,
+                  bottom: -2,
+                  width: '0%',
+                  height: '2px',
+                  backgroundColor: '#C5B0CD',
+                  transition: 'width 0.3s ease',
+                },
                 '&:hover': {
-                  backgroundColor: '#415E72',
-                  boxShadow: '0 2px 8px rgba(65,94,114,0.6)',
-                  transform: 'translateY(-1px)',
+                  color: '#C5B0CD',
+                  '&:after': { width: '100%' },
                 },
               }}
             >
@@ -75,6 +87,7 @@ const Navbar = () => {
           ))}
         </Box>
 
+        {/* Right spacer */}
         <Box sx={{ flexGrow: 1 }} />
       </Toolbar>
     </AppBar>
