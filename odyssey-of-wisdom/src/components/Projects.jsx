@@ -17,7 +17,7 @@ const Projects = () => (
     <Typography
       variant="h3"
       sx={{
-        fontWeight: 600,
+        fontWeight: 400,
         textAlign: 'center',
         mb: 8,
         color: '#5A3E61',
@@ -64,7 +64,7 @@ const Projects = () => (
               <Typography
                 variant="h5"
                 sx={{
-                  fontWeight: 600,
+                  fontWeight: 400,
                   color: '#5A3E61',
                   mb: 1,
                 }}

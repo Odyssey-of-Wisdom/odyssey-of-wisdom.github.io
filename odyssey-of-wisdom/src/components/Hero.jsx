@@ -7,7 +7,7 @@ const Hero = () => (
     id="home"
     sx={{
       position: 'relative',
-      height: '90vh',
+      height: { xs: 'calc(100vh - 52px)', md: 'calc(100vh - 60px)' },
       overflow: 'hidden',
       background: 'linear-gradient(120deg, #C5B0CD 30%, #415E72 100%)',
       display: 'flex',
@@ -16,9 +16,9 @@ const Hero = () => (
       alignItems: 'center',
       textAlign: 'center',
       px: { xs: 4, md: 8 },
+	  
     }}
   >
-    {/* Decorative Circle */}
     <Box
       sx={{
         position: 'absolute',
@@ -31,7 +31,6 @@ const Hero = () => (
       }}
     />
 
-    {/* Logo */}
     <Box
       component="img"
       src={Logo}
@@ -43,7 +42,6 @@ const Hero = () => (
       }}
     />
 
-    {/* Title */}
     <Typography
       variant="h1"
       sx={{
@@ -74,8 +72,7 @@ const Hero = () => (
       Connecting Greek youth with Erasmus+ opportunities for travel, learning, and cultural exchange across Europe.
     </Typography>
 
-    {/* Learn More Button */}
-    <Button
+\    <Button
       endIcon={<ExpandMoreIcon />}
       variant="contained"
       size="large"
@@ -101,7 +98,6 @@ const Hero = () => (
       Learn more
     </Button>
 
-    {/* Bottom Wave */}
     <Box
       component="svg"
       viewBox="0 0 1440 100"
