@@ -98,7 +98,7 @@ const Navbar = () => {
 					content: '""',
 					position: 'absolute',
 					left: 0,
-					bottom: -1,
+					bottom: { xs: 2, md: -1 },
 					width: activeSection === id ? '100%' : '0%',
 					height: '1.5px',
 					backgroundColor: '#C5B0CD',

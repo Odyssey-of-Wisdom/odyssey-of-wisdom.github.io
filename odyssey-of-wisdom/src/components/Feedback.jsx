@@ -1,32 +1,33 @@
+import React, { useEffect } from 'react'
 import { feedback } from '../data/feedback'
 import { Grid, Card, CardContent, CardHeader, Avatar, Typography, Box } from '@mui/material'
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote'
 
-const Feedback = () => (
-  <Box id="feedback" sx={{ py: 10, px: 4 }}>
-    <Typography variant="h4" textAlign="center" mb={4} color="#17313E">
-      What Youth Say
-    </Typography>
-    <Grid container spacing={4}>
-      {feedback.map((f) => (
-        <Grid item xs={12} sm={6} md={4} key={f.name}>
-          <Card sx={{ borderRadius: 4, backgroundColor: '#fff' }}>
-            <CardHeader
-              avatar={<Avatar src={f.image} />}
-              title={<Typography fontWeight="bold">{f.name}</Typography>}
-              subheader={f.project}
-            />
-            <CardContent>
-              <Typography variant="body2" sx={{ fontStyle: 'italic', color: '#415E72' }}>
-                <FormatQuoteIcon fontSize="small" sx={{ verticalAlign: 'middle', mr: 1 }} />
-                {f.quote}
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
-  </Box>
-)
+const Feedback = () => {
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = 'https://static.elfsight.com/platform/platform.js'
+    script.async = true
+    document.body.appendChild(script)
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
+
+  return (
+    <Box id="feedback" sx={{ py: 10, px: 4 }}>
+      <Typography variant="h3" textAlign="center" mb={4} color="#17313E">
+        What Youth Say
+      </Typography>
+
+      <Box sx={{ mb: 8, textAlign: 'center' }}>
+        <div
+          className="elfsight-app-15aa0c2c-1a53-49bd-8244-7babd5f0e2be"
+          data-elfsight-app-lazy
+        ></div>
+      </Box>
+    </Box>
+  )
+}
 
 export default Feedback

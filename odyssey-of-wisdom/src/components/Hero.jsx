@@ -55,7 +55,6 @@ const Hero = () => (
       Odyssey of Wisdom
     </Typography>
 
-    {/* Subtitle */}
     <Typography
       variant="h6"
       maxWidth={600}
