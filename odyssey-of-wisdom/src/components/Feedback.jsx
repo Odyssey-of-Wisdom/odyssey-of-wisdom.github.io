@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { feedback } from '../data/feedback'
 import { Grid, Card, CardContent, CardHeader, Avatar, Typography, Box } from '@mui/material'
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote'
 
