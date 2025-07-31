@@ -1,4 +1,4 @@
-import { Box, Typography, Grid, Card, CardMedia, CardContent, Chip, Stack } from '@mui/material'
+import { Box, Typography, Grid, Card, CardMedia, CardContent, Stack } from '@mui/material'
 import { projects } from '../data/projects'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
@@ -10,16 +10,38 @@ const Projects = () => (
       position: 'relative',
       background: 'linear-gradient(135deg, #EFE6F0 0%, #D4C1D6 100%)',
       color: '#17313E',
-      py: 12,
+      pt: { xs: 8, md: 10 },
+      pb: { xs: 10, md: 12 },
       px: { xs: 3, md: 10 },
+      overflow: 'hidden',
     }}
   >
+    {/* Diagonal top cut separator */}
+    <Box
+      component="svg"
+      viewBox="0 0 1440 100"
+      preserveAspectRatio="none"
+      sx={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: 80,
+        transform: 'translateY(-100%)',
+      }}
+    >
+      <path
+        d="M0,100 L1440,0 L1440,100 Z"
+        fill="#F3E2D4"
+      />
+    </Box>
+
     <Typography
       variant="h3"
       sx={{
         fontWeight: 400,
         textAlign: 'center',
-        mb: 8,
+        mb: { xs: 4, md: 6 },
         color: '#5A3E61',
         letterSpacing: '0.5px',
       }}
@@ -29,7 +51,13 @@ const Projects = () => (
 
     <Grid container spacing={6} justifyContent="center">
       {projects.map((p, index) => (
-        <Grid item xs={12} md={10} sx={{ maxWidth: '1100px', margin: '0 auto' }}>
+        <Grid
+          item
+          xs={12}
+          md={10}
+          key={p.title}
+          sx={{ maxWidth: '1100px', margin: '0 auto' }}
+        >
           <Card
             elevation={0}
             sx={{
@@ -63,11 +91,7 @@ const Projects = () => (
             >
               <Typography
                 variant="h5"
-                sx={{
-                  fontWeight: 400,
-                  color: '#5A3E61',
-                  mb: 1,
-                }}
+                sx={{ fontWeight: 400, color: '#5A3E61', mb: 1 }}
               >
                 {p.title}
               </Typography>
@@ -89,11 +113,7 @@ const Projects = () => (
 
               <Typography
                 variant="body2"
-                sx={{
-                  fontWeight: 300,
-                  color: '#3A2F3B',
-                  lineHeight: 1.7,
-                }}
+                sx={{ fontWeight: 300, color: '#3A2F3B', lineHeight: 1.7 }}
               >
                 {p.description}
               </Typography>
