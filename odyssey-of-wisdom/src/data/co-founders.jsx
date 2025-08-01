@@ -33,6 +33,6 @@ export const cofounders = [
     name: 'Vaggelis Argyropoulos',
     role: 'Co-Founder',
     image: vaggelisImg,
-    bio: `Vaggelis is a computer science student interested in AI, algorithms, and web development. He values learning through travel and cross-cultural exchange, applying his skills internationally.`
+    bio: `Vaggelis is a computer scientist interested in how technology affects everyday life. He values learning through travel and cross-cultural exchange, and enjoys being part of different places and communities.`
   }
 ]

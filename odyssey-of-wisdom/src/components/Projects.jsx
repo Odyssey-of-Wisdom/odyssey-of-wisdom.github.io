@@ -1,127 +1,173 @@
-import { Box, Typography, Grid, Card, CardMedia, CardContent, Stack } from '@mui/material'
+import React from 'react'
+import {
+  Box,
+  Typography,
+  Card,
+  CardMedia,
+  CardContent,
+  Stack,
+} from '@mui/material'
 import { projects } from '../data/projects'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
-const Projects = () => (
-  <Box
-    id="projects"
-    sx={{
-      position: 'relative',
-      backgroundColor: '#EFE6F0',
-      color: '#17313E',
-      pt: { xs: 3, md: 5 },
-      pb: { xs: 10, md: 12 },
-      px: { xs: 3, md: 10 },
-      overflow: 'hidden',
-    }}
-  >
-
-    <Typography
-      variant="h3"
-      sx={{
-        fontWeight: 400,
-        textAlign: 'center',
-        mb: { xs: 4, md: 6 },
-        color: '#5A3E61',
-        letterSpacing: '0.5px',
-      }}
-    >
-      Our Projects
-    </Typography>
-
-    <Grid container spacing={6} justifyContent="center">
-      {projects.map((p, index) => (
-        <Grid
-          item
-          xs={12}
-          md={10}
-          key={p.title}
-          sx={{ maxWidth: '1100px', margin: '0 auto' }}
-        >
-          <Card
-            elevation={0}
-            sx={{
-              display: 'flex',
-              flexDirection: index % 2 === 0 ? 'row' : 'row-reverse',
-              borderRadius: 6,
-              overflow: 'hidden',
-              boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
-              backgroundColor: '#FFFFFF',
-            }}
-          >
-            <CardMedia
-              component="img"
-              image={p.image}
-              alt={p.title}
-              sx={{
-                width: { xs: '100%', md: '50%' },
-                height: 320,
-                objectFit: 'cover',
-              }}
-            />
-
-            <CardContent
-              sx={{
-                px: { xs: 3, md: 5 },
-                py: { xs: 4, md: 5 },
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-              }}
-            >
-              <Typography
-                variant="h5"
-                sx={{ fontWeight: 400, color: '#5A3E61', mb: 1 }}
-              >
-                {p.title}
-              </Typography>
-
-              <Stack direction="row" spacing={2} mb={2}>
-                <Stack direction="row" spacing={1} alignItems="center">
-                  <CalendarMonthIcon fontSize="small" />
-                  <Typography variant="body2" color="#6E4D74">
-                    {p.date}
-                  </Typography>
-                </Stack>
-                <Stack direction="row" spacing={1} alignItems="center">
-                  <LocationOnIcon fontSize="small" />
-                  <Typography variant="body2" color="#6E4D74">
-                    {p.location}
-                  </Typography>
-                </Stack>
-              </Stack>
-
-              <Typography
-                variant="body2"
-                sx={{ fontWeight: 300, color: '#3A2F3B', lineHeight: 1.7 }}
-              >
-                {p.description}
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
-
+const Projects = () => {
+  return (
     <Box
-      component="svg"
-      viewBox="0 0 1440 100"
-      preserveAspectRatio="none"
+      id="projects"
       sx={{
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        width: '100%',
-        height: 80,
+        position: 'relative',
+        backgroundColor: '#EFE6F0',
+        color: '#17313E',
+        pt: { xs: 4, md: 6 },
+        pb: { xs: 10, md: 14 },
+        px: { xs: 3, md: 8 },
+        overflow: 'hidden',
       }}
     >
-      <path
-        d="M0,0 C480,80 960,0 1440,80 L1440,100 L0,100 Z"
-        fill="#F3E2D4"
-      />
+      <Typography
+        variant="h3"
+        sx={{
+          fontWeight: 500,
+          textAlign: 'center',
+          mb: { xs: 5, md: 8 },
+          color: '#5A3E61',
+          letterSpacing: '0.5px',
+        }}
+      >
+        Our Projects
+      </Typography>
+
+        <Box sx={{ maxWidth: 1100, margin: '0 auto', backgroundColor: 'transparent', p: 3, borderRadius: 3 }}>
+			<Slider
+				dots={true}
+				infinite={projects.length > 2}
+				speed={500}
+				slidesToShow={1}
+				slidesToScroll={1}
+				arrows={true}
+				adaptiveHeight={true}
+			>
+				{Array.from({ length: Math.ceil(projects.length / 2) }).map(
+				(_, slideIndex) => (
+					<Box
+					key={slideIndex}
+					sx={{ display: 'flex', flexDirection: 'column' }}
+					>
+					{projects
+						.slice(slideIndex * 2, slideIndex * 2 + 2)
+						.map((p, index, arr) => (
+						<Box
+							key={p.title}
+							sx={{
+							maxWidth: '1100px',
+							margin: '0 auto',
+							mb: index < arr.length - 1 ? 6 : 0,
+							}}
+						>
+							<Card
+							elevation={3}
+							sx={{
+								display: 'flex',
+								flexDirection: {
+								xs: 'column',
+								md:
+									(slideIndex * 2 + index) % 2 === 0
+									? 'row'
+									: 'row-reverse',
+								},
+								borderRadius: 5,
+								overflow: 'hidden',
+								backgroundColor: '#FFFFFF',
+							}}
+							>
+							<CardMedia
+								component="img"
+								image={p.image}
+								alt={p.title}
+								sx={{
+								width: { xs: '100%', md: '40%' },
+								height: { xs: 220, md: 320 },
+								objectFit: 'cover',
+								}}
+							/>
+
+							<CardContent
+								sx={{
+								px: { xs: 3, md: 4 },
+								py: { xs: 3, md: 4 },
+								display: 'flex',
+								flexDirection: 'column',
+								justifyContent: 'center',
+								width: { md: '60%' },
+								}}
+							>
+								<Typography
+								variant="h6"
+								sx={{ fontWeight: 500, color: '#5A3E61', mb: 1 }}
+								>
+								{p.title}
+								</Typography>
+
+								<Stack direction="row" spacing={2} mb={2}>
+								<Stack direction="row" spacing={1} alignItems="center">
+									<CalendarMonthIcon fontSize="small" />
+									<Typography variant="caption" color="#6E4D74">
+									{p.date}
+									</Typography>
+								</Stack>
+								<Stack direction="row" spacing={1} alignItems="center">
+									<LocationOnIcon fontSize="small" />
+									<Typography variant="caption" color="#6E4D74">
+									{p.location}
+									</Typography>
+								</Stack>
+								</Stack>
+
+								<Box
+								sx={{
+									fontWeight: 300,
+									color: '#3A2F3B',
+									lineHeight: 1.6,
+									fontSize: '0.85rem',
+									maxHeight: { xs: 'auto', md: 200 },
+									overflowY: 'auto',
+								}}
+								dangerouslySetInnerHTML={{ __html: p.description }}
+								/>
+							</CardContent>
+							</Card>
+						</Box>
+						))}
+					</Box>
+				)
+				)}
+			</Slider>
+		</Box>
+
+
+      <Box
+        component="svg"
+        viewBox="0 0 1440 100"
+        preserveAspectRatio="none"
+        sx={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          width: '100%',
+          height: 80,
+        }}
+      >
+        <path
+          d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z"
+          fill="#F3E2D4"
+        />
+      </Box>
     </Box>
-  </Box>
-)
+  )
+}
 
 export default Projects

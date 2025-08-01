@@ -11,3 +11,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.slick-slider {
+  position: relative;
+}
+
+/* Dots */
+.slick-slider .slick-dots li button:before {
+  font-size: 16px;          /* Larger dots */
+  color: #A9A4B0;           /* softer muted gray-purple for inactive dots */
+  opacity: 1 !important;
+  transition: all 0.3s ease;
+}
+
+/* Active dot: filled and bigger */
+.slick-slider .slick-dots li.slick-active button:before {
+  color: #7E7491 !important; /* slightly stronger muted purple-gray for active dot */
+  font-size: 20px;
+  opacity: 1 !important;
+}
+
+/* Arrows */
+.slick-slider .slick-prev,
+.slick-slider .slick-next {
+  z-index: 2;
+}
+
+.slick-slider .slick-prev:before,
+.slick-slider .slick-next:before {
+  font-size: 30px;
+  color: #7E7491 !important; /* same subtle purple-gray for arrows */
+  opacity: 1 !important;
+  transition: color 0.3s ease;
+}
+
+.slick-slider .slick-prev:hover:before,
+.slick-slider .slick-next:hover:before {
+  color: #5E5871 !important; /* a bit darker on hover */
+}
