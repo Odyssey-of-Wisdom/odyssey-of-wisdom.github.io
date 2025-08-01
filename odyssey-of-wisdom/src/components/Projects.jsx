@@ -8,33 +8,14 @@ const Projects = () => (
     id="projects"
     sx={{
       position: 'relative',
-      background: 'linear-gradient(135deg, #EFE6F0 0%, #D4C1D6 100%)',
+      backgroundColor: '#EFE6F0',
       color: '#17313E',
-      pt: { xs: 8, md: 10 },
+      pt: { xs: 3, md: 5 },
       pb: { xs: 10, md: 12 },
       px: { xs: 3, md: 10 },
       overflow: 'hidden',
     }}
   >
-    {/* Diagonal top cut separator */}
-    <Box
-      component="svg"
-      viewBox="0 0 1440 100"
-      preserveAspectRatio="none"
-      sx={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: 80,
-        transform: 'translateY(-100%)',
-      }}
-    >
-      <path
-        d="M0,100 L1440,0 L1440,100 Z"
-        fill="#F3E2D4"
-      />
-    </Box>
 
     <Typography
       variant="h3"
@@ -122,6 +103,24 @@ const Projects = () => (
         </Grid>
       ))}
     </Grid>
+
+    <Box
+      component="svg"
+      viewBox="0 0 1440 100"
+      preserveAspectRatio="none"
+      sx={{
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        height: 80,
+      }}
+    >
+      <path
+        d="M0,0 C480,80 960,0 1440,80 L1440,100 L0,100 Z"
+        fill="#F3E2D4"
+      />
+    </Box>
   </Box>
 )
 

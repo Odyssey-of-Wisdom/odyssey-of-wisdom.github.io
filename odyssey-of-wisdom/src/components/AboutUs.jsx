@@ -7,7 +7,7 @@ const AboutUs = () => (
     py: 10,
     px: { xs: 3, md: 10 },
 	pt: 10,
-    pb: 4,
+    pb: { xs: 12, md: 16 },
     background: 'linear-gradient(120deg, #F3E2D4 0%, #EADAE3 100%)',
     color: '#17313E',
   }}>
@@ -210,6 +210,23 @@ const AboutUs = () => (
         ))} 
       </Grid> 
     </Box>
+	<Box
+	component="svg"
+	viewBox="0 0 1440 80"
+	preserveAspectRatio="none"
+	sx={{
+		position: 'absolute',
+		bottom: 0,
+		left: 0,
+		width: '100%',
+		height: 80,
+	}}
+	>
+	<path
+		d="M0,20 C360,80 1080,-40 1440,20 L1440,80 L0,80 Z"
+		fill="#EFE6F0"
+	/>
+	</Box>
   </Box>
 ) 
 
