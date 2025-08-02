@@ -208,18 +208,24 @@ const AboutUs = () => (
 					sx={{ backgroundColor: '#415E72', color: 'white', mb: 1 }}
 				/>
 				<Typography
-					variant="body2"
-					color="text.secondary"
-					sx={{
+				variant="body2"
+				color="text.secondary"
+				sx={{
 					display: '-webkit-box',
 					WebkitBoxOrient: 'vertical',
-					WebkitLineClamp: 4,
+					WebkitLineClamp: {
+					xs: 6,
+					sm: 8,
+					},
 					overflow: 'hidden',
 					textOverflow: 'ellipsis',
-					minHeight: { xs: '4em', sm: '5.5em' },
-					}}
+					minHeight: {
+					xs: '6.6em',
+					sm: '7em',
+					},
+				}}
 				>
-					{person.bio}
+				{person.bio}
 				</Typography>
 				</CardContent>
 			</Card>
