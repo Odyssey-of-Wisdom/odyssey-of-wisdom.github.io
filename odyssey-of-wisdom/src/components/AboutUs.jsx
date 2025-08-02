@@ -157,58 +157,75 @@ const AboutUs = () => (
       </Typography>
 
       <Grid container spacing={4} justifyContent="center">
-        {cofounders.map((person) => (
-          <Grid item xs={12} sm={6} md={4} key={person.name}>
-            <Card
-              elevation={3}
-              sx={{
-                maxWidth: 320,
-                margin: '0 auto',
-                backgroundColor: '#FFFFFF',
-                borderRadius: 3,
-                display: 'flex',
-                flexDirection: 'column',
-              }}
-            >
-              <CardMedia
-                component="img"
-                image={person.image}
-                alt={person.name}   
-              sx={{ 
-                height: 330, 
-                objectFit: 'cover', 
-                borderTopLeftRadius: 12, 
-                borderTopRightRadius: 12 
-              }} 
-              /> 
-              <CardContent> 
-                <Typography variant="h6" fontWeight={400} gutterBottom> 
-                  {person.name} 
-                </Typography> 
-                <Chip 
-                  label={person.role} 
-                  size="small" 
-                  sx={{ backgroundColor: '#415E72', color: 'white', mb: 1 }} 
-                /> 
-                <Typography 
-                  variant="body2" 
-                  color="text.secondary" 
-                  sx={{ 
-                    display: '-webkit-box', 
-                    WebkitBoxOrient: 'vertical', 
-                    WebkitLineClamp: 5, 
-                    overflow: 'hidden', 
-                    textOverflow: 'ellipsis', 
-                    minHeight: '5.5em' 
-                  }} 
-                > 
-                  {person.bio} 
-                </Typography> 
-              </CardContent> 
-            </Card> 
-          </Grid> 
-        ))} 
-      </Grid> 
+		{cofounders.map((person) => (
+			<Grid item xs={12} sm={6} md={4} key={person.name}>
+			<Card
+				elevation={3}
+				sx={(theme) => ({
+				maxWidth: { xs: '100%', sm: 320 },
+				margin: '0 auto',
+				backgroundColor: '#FFFFFF',
+				borderRadius: 3,
+				display: 'flex',
+				flexDirection: {
+					xs: 'row',
+					sm: 'column'
+				},
+				alignItems: {
+					xs: 'center',
+					sm: 'stretch'
+				},
+				p: { xs: 1, sm: 0 },
+				})}
+			>
+				<CardMedia
+				component="img"
+				image={person.image}
+				alt={person.name}
+				sx={(theme) => ({
+					width: { xs: 110, sm: '100%' },
+					height: { xs: 110, sm: 330 },
+					objectFit: 'cover',
+					borderRadius: {
+					xs: 2,
+					sm: '12px 12px 0 0'
+					},
+					mr: { xs: 2, sm: 0 }
+				})}
+				/>
+				<CardContent
+				sx={{
+					flex: 1,
+					padding: { xs: '0.5rem', sm: '1rem' }
+				}}
+				>
+				<Typography variant="h6" fontWeight={400} gutterBottom>
+					{person.name}
+				</Typography>
+				<Chip
+					label={person.role}
+					size="small"
+					sx={{ backgroundColor: '#415E72', color: 'white', mb: 1 }}
+				/>
+				<Typography
+					variant="body2"
+					color="text.secondary"
+					sx={{
+					display: '-webkit-box',
+					WebkitBoxOrient: 'vertical',
+					WebkitLineClamp: 4,
+					overflow: 'hidden',
+					textOverflow: 'ellipsis',
+					minHeight: { xs: '4em', sm: '5.5em' },
+					}}
+				>
+					{person.bio}
+				</Typography>
+				</CardContent>
+			</Card>
+			</Grid>
+		))}
+	  </Grid>
     </Box>
 	<Box
 	component="svg"
