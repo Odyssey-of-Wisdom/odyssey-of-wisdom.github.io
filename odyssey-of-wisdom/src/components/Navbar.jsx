@@ -1,12 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import { AppBar, Toolbar, Button, Box } from '@mui/material'
 import Logo from '../assets/logo2.png'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 
 const Navbar = () => {
+  const navigate = useNavigate()
+  const location = useLocation()
+
   const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-  }
+	if (location.pathname === '/') {
+		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+	} else {
+		navigate(`/#${id}`)
+	}
+ }
+
 
   const [activeSection, setActiveSection] = useState('')
 
@@ -53,7 +62,13 @@ const Navbar = () => {
         position: 'relative',
       }}>
         <Box
-          onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}
+          onClick={() => {
+			if (location.pathname === '/') {
+				window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+			} else {
+				navigate('/', { state: { scrollToTop: true } })
+			}
+		  }}
           sx={{
             cursor: 'pointer',
             ml: { xs: 0.5, md: 1.5 },

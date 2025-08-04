@@ -7,12 +7,21 @@ import {
   CardContent,
   Stack,
 } from '@mui/material'
+import { Link } from 'react-router-dom'
 import { projects } from '../data/projects'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+
+const slugify = (text) =>
+  text.toLowerCase().replace(/[^\w ]+/g, '').replace(/ +/g, '-')
+
+const projectsWithSlugs = projects.map((p) => ({
+  ...p,
+  slug: slugify(p.title),
+}))
 
 const Projects = () => {
   return (
@@ -22,7 +31,7 @@ const Projects = () => {
         position: 'relative',
         backgroundColor: '#EFE6F0',
         color: '#17313E',
-        pt: { xs: 4, md: 6 },
+        pt: { xs: 7, md: 10 },
         pb: { xs: 10, md: 14 },
         px: { xs: 3, md: 8 },
         overflow: 'hidden',
@@ -57,7 +66,7 @@ const Projects = () => {
 					key={slideIndex}
 					sx={{ display: 'flex', flexDirection: 'column' }}
 					>
-					{projects
+					{projectsWithSlugs
 						.slice(slideIndex * 2, slideIndex * 2 + 2)
 						.map((p, index, arr) => (
 						<Box
@@ -126,18 +135,45 @@ const Projects = () => {
 									</Typography>
 								</Stack>
 								</Stack>
-
-								<Box
+								<Typography
+								variant="body2"
 								sx={{
 									fontWeight: 300,
 									color: '#3A2F3B',
 									lineHeight: 1.6,
-									fontSize: '0.85rem',
-									maxHeight: { xs: 'auto', md: 200 },
-									overflowY: 'auto',
+									fontSize: '0.9rem',
+									mb: 2,
 								}}
-								dangerouslySetInnerHTML={{ __html: p.description }}
-								/>
+								>
+								{p.briefDescription}
+								</Typography>
+								<Box sx={{ mt: 'auto' }}>
+								<Link to={`/projects/${p.slug}`} style={{ textDecoration: 'none' }}>
+								<Box
+									component="span"
+									sx={{
+									mt: 2,
+									display: 'inline-block',
+									px: 2,
+									py: 1,
+									borderRadius: 2,
+									fontSize: '0.8rem',
+									fontWeight: 500,
+									backgroundColor: '#E5D4EA',
+									color: '#5A3E61',
+									textAlign: 'center',
+									cursor: 'pointer',
+									transition: 'all 0.3s ease',
+									'&:hover': {
+										backgroundColor: '#D6C0E1',
+										transform: 'scale(1.05)',
+									},
+									}}
+								>
+									See more →
+								</Box>
+								</Link>
+								</Box>
 							</CardContent>
 							</Card>
 						</Box>

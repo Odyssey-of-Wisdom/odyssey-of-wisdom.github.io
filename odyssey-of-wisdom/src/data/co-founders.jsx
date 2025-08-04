@@ -3,6 +3,7 @@ import iliasImg from '../assets/ilias.jpg'
 import antonisImg from '../assets/antonis.jpg'
 import giorgosImg from '../assets/giorgos.jpg'
 import vaggelisImg from '../assets/vaggelis.jpg'
+import foteiniImg from '../assets/foteini.png'
 
 export const cofounders = [
   {
@@ -30,9 +31,15 @@ export const cofounders = [
     bio: `Giorgos holds a Mathematics degree and studies Computer Science. After discovering Erasmus+, he developed a passion for youth exchanges and now empowers others as a math teacher and project leader.`
   },
   {
+	name: 'Foteini Karamitsou',
+	role: 'Co-Founder',
+	image: foteiniImg,
+	bio: `Foteini is a special education student, passionate about youth work and storytelling. Curious about cultures, she shares Erasmus+ stories through blogging and social media.`
+  },
+  {
     name: 'Vaggelis Argyropoulos',
     role: 'Co-Founder',
     image: vaggelisImg,
     bio: `Vaggelis is a computer scientist interested in how technology affects everyday life. He values learning through travel and cross-cultural exchange, and enjoys being part of different places and communities.`
-  }
+  },
 ]
