@@ -7,7 +7,7 @@ import vaggelisImg from '../assets/vaggelis.jpg'
 export const cofounders = [
   {
     name: 'Panagiotis Kotsalis',
-    role: 'Co-founder - Executive Director',
+    role: 'Co-founder \\ Executive Director',
     image: panagiotisImg,
     bio: `Panagiotis has experience in active citizenship and leadership through youth councils. He promotes civic engagement and intercultural dialogue, inspiring youth with values of unity and cooperation.`
   },
@@ -25,7 +25,7 @@ export const cofounders = [
   },
   {
     name: 'Giorgos Tsitlakidis',
-    role: 'Project Manager',
+    role: 'Co-founder \\ Project Manager',
     image: giorgosImg,
     bio: `Giorgos holds a Mathematics degree and studies Computer Science. After discovering Erasmus+, he developed a passion for youth exchanges and now empowers others as a math teacher and project leader.`
   },
