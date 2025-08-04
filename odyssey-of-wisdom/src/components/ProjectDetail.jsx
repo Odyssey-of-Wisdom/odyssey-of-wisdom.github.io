@@ -120,49 +120,87 @@ export default function ProjectDetail() {
 
       <Card elevation={4} sx={{ borderRadius: 4, overflow: 'hidden' }}>
         <Box
-          sx={{
-            display: 'grid',
-            gridTemplateColumns: { xs: '1fr', md: '2fr 1fr' },
-            gridTemplateRows: { xs: 'auto auto', md: '1fr 1fr' },
-            gap: 1,
-          }}
-        >
-          <Box
-            component="img"
-            src={allImages[0]}
-            alt={`${project.title} main`}
-            loading="lazy"
-            sx={{
-              gridRow: { xs: 'auto', md: '1 / span 2' },
-              gridColumn: { xs: 'auto', md: '1 / span 1' },
-              width: '100%',
-              height: { xs: 200, md: '100%' },
-              objectFit: 'cover',
-            }}
-          />
-          {allImages.slice(1).map((img, i) => (
-            <Box
-              key={i}
-              component="img"
-              src={img}
-              alt={`${project.title} view ${i + 2}`}
-              loading="lazy"
-              sx={{
-                width: '100%',
-                height: 200,
-                objectFit: 'cover',
-              }}
-            />
-          ))}
-        </Box>
+		sx={{
+			display: 'grid',
+			gap: 1,
+			gridTemplateColumns:
+			allImages.length === 1 ? '1fr' :
+			allImages.length === 2 ? '1fr 1fr' :
+			'2fr 1fr',
+			gridTemplateRows:
+			allImages.length === 3 ? '1fr 1fr' : 'auto',
+		}}
+		>
+		{allImages.length === 1 && (
+			<Box
+			component="img"
+			src={allImages[0]}
+			alt={`${project.title} main`}
+			loading="lazy"
+			sx={{
+				width: '100%',
+				height: { xs: 200, md: 420 },
+				objectFit: 'cover',
+				display: 'block',
+			}}
+			/>
+		)}
+
+		{allImages.length === 2 && allImages.map((img, i) => (
+			<Box
+			key={i}
+			component="img"
+			src={img}
+			alt={`${project.title} view ${i + 1}`}
+			loading="lazy"
+			sx={{
+				width: '100%',
+				height: { xs: 200, md: 400 },
+				objectFit: 'cover',
+				display: 'block',
+			}}
+			/>
+		))}
+
+		{allImages.length === 3 && (
+			<>
+			<Box
+				component="img"
+				src={allImages[0]}
+				alt={`${project.title} main`}
+				loading="lazy"
+				sx={{
+				gridRow: { md: '1 / span 2' },
+				width: '100%',
+				height: { xs: 200, md: '100%' },
+				objectFit: 'cover',
+				display: 'block',
+				}}
+			/>
+			{allImages.slice(1).map((img, i) => (
+				<Box
+				key={i}
+				component="img"
+				src={img}
+				alt={`${project.title} view ${i + 2}`}
+				loading="lazy"
+				sx={{
+					width: '100%',
+					height: 200,
+					objectFit: 'cover',
+					display: 'block',
+				}}
+				/>
+			))}
+			</>
+		)}
+		</Box>
 
         <CardContent sx={{ p: { xs: 2, md: 4 } }}>
-          {/* Title */}
           <Typography variant="h4" sx={{ fontWeight: 700, color: '#5A3E61', mb: 2 }}>
             {project.title}
           </Typography>
 
-          {/* Meta row */}
           <Stack direction="row" spacing={4} mb={3} flexWrap="wrap" sx={{ color: '#6E4D74' }}>
             <Stack direction="row" spacing={1} alignItems="center">
               <CalendarMonthIcon fontSize="small" />
@@ -176,14 +214,12 @@ export default function ProjectDetail() {
 
           <Divider sx={{ mb: 3, borderColor: '#EFE6F0' }} />
 
-          {/* Description */}
           <Typography
             variant="body1"
             sx={{ color: '#3A2F3B', lineHeight: 1.7, whiteSpace: 'pre-line' }}
             dangerouslySetInnerHTML={{ __html: project.description }}
           />
 
-          {/* Back Button */}
           <Box textAlign="center" mt={4}>
             <Button
               variant="outlined"
