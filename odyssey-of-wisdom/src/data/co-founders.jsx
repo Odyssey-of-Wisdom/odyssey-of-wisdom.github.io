@@ -7,7 +7,7 @@ import vaggelisImg from '../assets/vaggelis.jpg'
 export const cofounders = [
   {
     name: 'Panagiotis Kotsalis',
-    role: 'Executive Director',
+    role: 'Co-founder - Executive Director',
     image: panagiotisImg,
     bio: `Panagiotis has experience in active citizenship and leadership through youth councils. He promotes civic engagement and intercultural dialogue, inspiring youth with values of unity and cooperation.`
   },
