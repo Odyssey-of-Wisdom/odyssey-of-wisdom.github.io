@@ -24,7 +24,7 @@ export const projects = [
 	🌍 This project marked the closing chapter of our collaboration with Ofensiva Tinerilor on this project cycle — and we couldn’t be more proud of the growth, learning, and friendships built.`
   },
   {
-	title: 'Thematic Awareness Training/ Peers for Equality',
+	title: 'Thematic Awareness Training - Peers for Equality',
 	location: 'Arad, Romania',
 	date: '7-16 April 2025',
 	image: romania2,
