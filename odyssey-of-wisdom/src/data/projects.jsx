@@ -1,6 +1,9 @@
 import romania1 from '../assets/romania1.png'
 import romania1_2 from '../assets/romania1_2.png'
 import romania1_3 from '../assets/romania1_3.png'
+import romania2 from '../assets/romania2.jpg'
+import romania2_2 from '../assets/romania2_2.jpg'
+import romania2_3 from '../assets/romania2_3.jpg'
 
 
 export const projects = [
@@ -10,7 +13,7 @@ export const projects = [
 	date: '12-21 May 2025',
 	image: romania1,
 	images: [romania1_2, romania1_3],
-	briefDescription: 'Empowered first-time volunteers with practical tools to combat discrimination and foster intercultural understanding.',
+	briefDescription: 'An immersive Erasmus+ training in Moneasa focused on diversity, intercultural understanding, and anti-discrimination. A life-changing first project for many of our volunteers.',
 	description: `🇷🇴✨ From May 12-21, our team had the opportunity to participate in the Peers for Diversity training course in Moneasa, Romania, hosted by our amazing partners <a href="https://instagram.com/ofensiva_tinerilor" target="_blank">@ofensiva_tinerilor</a>.
 
 	🙌 For our volunteers, this was their first time joining an Erasmus+ project — and they all agreed:
@@ -20,4 +23,31 @@ export const projects = [
 
 	🌍 This project marked the closing chapter of our collaboration with Ofensiva Tinerilor on this project cycle — and we couldn’t be more proud of the growth, learning, and friendships built.`
   },
+  {
+	title: 'Thematic Awareness Training/ Peers for Equality',
+	location: 'Arad, Romania',
+	date: '7-16 April 2025',
+	image: romania2,
+	images: [romania2_2, romania2_3],
+	briefDescription: 'A powerful Erasmus+ experience exploring gender equality, social equity, and inclusive youth work through interactive workshops and creative collaboration.',
+	description: `Our Erasmus+ project brought together passionate youth from across the EU to dive into meaningful discussions about gender equality and social equity. Over the course of 8 days, participants explored powerful themes like:
+
+	Gender Across Cultures 🤝
+
+	The Mechanisms of Oppression 🔍
+
+	Promoting Equity in Youth Work 💡
+
+	Understanding Ideal Gender Roles 👩‍🎤👨‍🎤
+
+	Confronting Prejudice through Photo-voice 📸
+
+	Building a Common Language for Equality 🌱
+
+	Activities included dynamic workshops, team-building, design thinking, and even a fun speed dating exercise to connect, learn, and create change together. The program wrapped up with powerful action planning for a more inclusive future!
+
+	Thank you to all the amazing participants for bringing energy, ideas, and passion to the table! 🌟
+	Also, many thanks to <a href="https://instagram.com/ofensiva_tinerilor" target="_blank">@ofensiva_tinerilor</a> for their excellent organized and insightful project!
+`
+  }
 ]

@@ -110,7 +110,7 @@ const Projects = () => {
 								py: { xs: 3, md: 4 },
 								display: 'flex',
 								flexDirection: 'column',
-								justifyContent: 'center',
+								justifyContent: 'space-between',
 								width: { md: '60%' },
 								}}
 							>
@@ -147,31 +147,31 @@ const Projects = () => {
 								>
 								{p.briefDescription}
 								</Typography>
-								<Box sx={{ mt: 'auto' }}>
+								<Box sx={{ mt: 2 }}>
 								<Link to={`/projects/${p.slug}`} style={{ textDecoration: 'none' }}>
-								<Box
+									<Box
 									component="span"
 									sx={{
-									mt: 2,
-									display: 'inline-block',
-									px: 2,
-									py: 1,
-									borderRadius: 2,
-									fontSize: '0.8rem',
-									fontWeight: 500,
-									backgroundColor: '#E5D4EA',
-									color: '#5A3E61',
-									textAlign: 'center',
-									cursor: 'pointer',
-									transition: 'all 0.3s ease',
-									'&:hover': {
+										display: 'inline-block',
+										px: 2,
+										py: 0.8,
+										borderRadius: 2,
+										fontSize: '0.8rem',
+										fontWeight: 500,
+										backgroundColor: '#E5D4EA',
+										color: '#5A3E61',
+										textAlign: 'center',
+										cursor: 'pointer',
+										alignSelf: 'start',
+										transition: 'all 0.3s ease',
+										'&:hover': {
 										backgroundColor: '#D6C0E1',
 										transform: 'scale(1.05)',
-									},
+										},
 									}}
-								>
+									>
 									See more →
-								</Box>
+									</Box>
 								</Link>
 								</Box>
 							</CardContent>

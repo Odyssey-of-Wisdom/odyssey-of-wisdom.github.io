@@ -60,9 +60,25 @@ export default function ProjectDetail() {
         <Typography variant="body1" sx={{ mb: 3 }}>
           Sorry, we couldn’t find what you’re looking for.
         </Typography>
-        <Button variant="contained" onClick={() => navigate('/')} size="large" sx={{ borderRadius: 3 }}>
-          Back to Home
-        </Button>
+        <Button
+		variant="contained"
+		onClick={() => navigate('/')}
+		size="large"
+		sx={{
+			borderRadius: 3,
+			backgroundColor: '#5A3E61',
+			color: '#fff',
+			fontWeight: 600,
+			px: 4,
+			py: 1.5,
+			textTransform: 'none',
+			'&:hover': {
+			backgroundColor: '#6E4D74',
+			},
+		}}
+		>
+		Back to Home
+		</Button>
       </Box>
     )
   }
@@ -126,9 +142,10 @@ export default function ProjectDetail() {
 			gridTemplateColumns:
 			allImages.length === 1 ? '1fr' :
 			allImages.length === 2 ? '1fr 1fr' :
-			'2fr 1fr',
+			{ xs: '1fr', md: '2fr 1fr' },
 			gridTemplateRows:
-			allImages.length === 3 ? '1fr 1fr' : 'auto',
+			allImages.length === 3 ? { xs: 'auto', md: '1fr 1fr' } : 'auto',
+			height: { xs: 'auto', md: 500 },
 		}}
 		>
 		{allImages.length === 1 && (
@@ -139,8 +156,9 @@ export default function ProjectDetail() {
 			loading="lazy"
 			sx={{
 				width: '100%',
-				height: { xs: 200, md: 420 },
+				height: { xs: 200, md: 500 },
 				objectFit: 'cover',
+				objectPosition: 'center',
 				display: 'block',
 			}}
 			/>
@@ -155,8 +173,9 @@ export default function ProjectDetail() {
 			loading="lazy"
 			sx={{
 				width: '100%',
-				height: { xs: 200, md: 400 },
+				height: { xs: 200, md: 500 },
 				objectFit: 'cover',
+				objectPosition: 'center',
 				display: 'block',
 			}}
 			/>
@@ -174,6 +193,7 @@ export default function ProjectDetail() {
 				width: '100%',
 				height: { xs: 200, md: '100%' },
 				objectFit: 'cover',
+				objectPosition: 'center',
 				display: 'block',
 				}}
 			/>
@@ -186,8 +206,9 @@ export default function ProjectDetail() {
 				loading="lazy"
 				sx={{
 					width: '100%',
-					height: 200,
+					height: { xs: 200, md: 250 },
 					objectFit: 'cover',
+					objectPosition: 'center',
 					display: 'block',
 				}}
 				/>
@@ -195,7 +216,6 @@ export default function ProjectDetail() {
 			</>
 		)}
 		</Box>
-
         <CardContent sx={{ p: { xs: 2, md: 4 } }}>
           <Typography variant="h4" sx={{ fontWeight: 700, color: '#5A3E61', mb: 2 }}>
             {project.title}
