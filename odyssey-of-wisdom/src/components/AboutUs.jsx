@@ -202,11 +202,6 @@ const AboutUs = () => (
 				<Typography variant="h6" fontWeight={400} gutterBottom>
 					{person.name}
 				</Typography>
-				<Chip
-					label={person.role}
-					size="small"
-					sx={{ backgroundColor: '#415E72', color: 'white', mb: 1 }}
-				/>
 				<Typography
 				variant="body2"
 				color="text.secondary"
