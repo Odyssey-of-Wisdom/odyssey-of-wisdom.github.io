@@ -1,79 +1,80 @@
-import React, { useState, useEffect } from 'react'
-import { AppBar, Toolbar, Button, Box } from '@mui/material'
-import Logo from '../assets/logo2.png'
-import { useNavigate, useLocation } from 'react-router-dom'
-
+import React, { useState, useEffect } from "react";
+import { AppBar, Toolbar, Button, Box } from "@mui/material";
+import Logo from "../assets/logo3.png";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate = useNavigate()
-  const location = useLocation()
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollTo = (id) => {
-	if (location.pathname === '/') {
-		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-	} else {
-		navigate(`/#${id}`)
-	}
- }
+    if (location.pathname === "/") {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate(`/#${id}`);
+    }
+  };
 
-
-  const [activeSection, setActiveSection] = useState('')
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-	const handleScroll = () => {
-		if (window.scrollY < 150) {
-			setActiveSection('')
-			return
-		}
+    const handleScroll = () => {
+      if (window.scrollY < 150) {
+        setActiveSection("");
+        return;
+      }
 
-		const sections = ['about', 'projects', 'feedback']
-		for (let id of sections) {
-			const el = document.getElementById(id)
-			if (el) {
-			const rect = el.getBoundingClientRect()
-			if (rect.top <= 100 && rect.bottom >= 100) {
-				setActiveSection(id)
-				break
-			}
-		  }
-		}
-	}
+      const sections = ["about", "projects", "feedback"];
+      for (let id of sections) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(id);
+            break;
+          }
+        }
+      }
+    };
 
-	window.addEventListener('scroll', handleScroll)
-	handleScroll()
-	return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <AppBar
       position="sticky"
       elevation={0}
       sx={{
-        backgroundColor: 'rgba(23,49,62,0.7)',
-        backdropFilter: 'blur(10px)',
+        backgroundColor: "rgba(23,49,62,0.7)",
+        backdropFilter: "blur(10px)",
         px: { xs: 1, md: 4 },
         py: { xs: 0.3, md: 0.5 },
       }}
     >
-      <Toolbar disableGutters sx={{
-        display: 'flex',
-        alignItems: 'center',
-        height: { xs: 52, md: 60 },
-        position: 'relative',
-      }}>
+      <Toolbar
+        disableGutters
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          height: { xs: 52, md: 60 },
+          position: "relative",
+        }}
+      >
         <Box
           onClick={() => {
-			if (location.pathname === '/') {
-				window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-			} else {
-				navigate('/', { state: { scrollToTop: true } })
-			}
-		  }}
+            if (location.pathname === "/") {
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            } else {
+              navigate("/", { state: { scrollToTop: true } });
+            }
+          }}
           sx={{
-            cursor: 'pointer',
+            cursor: "pointer",
             ml: { xs: 0.5, md: 1.5 },
-            transition: 'transform 0.3s ease',
-            '&:hover': { transform: 'scale(1.15) rotate(-3deg)' },
+            transition: "transform 0.3s ease",
+            "&:hover": { transform: "scale(1.15) rotate(-3deg)" },
           }}
         >
           <Box
@@ -82,7 +83,7 @@ const Navbar = () => {
             alt="Odyssey Logo"
             sx={{
               height: { xs: 42, md: 64 },
-              filter: 'drop-shadow(0 0 3px rgba(255,255,255,0.15))',
+              filter: "drop-shadow(0 0 3px rgba(255,255,255,0.15))",
               borderRadius: 1,
             }}
           />
@@ -90,41 +91,45 @@ const Navbar = () => {
 
         <Box
           sx={{
-            position: 'absolute',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            display: 'flex',
+            position: "absolute",
+            left: "50%",
+            transform: "translateX(-50%)",
+            display: "flex",
             gap: { xs: 2, md: 4 },
           }}
         >
-          {[{ id: 'about', label: 'About Us' }, { id: 'projects', label: 'Projects' }, { id: 'feedback', label: 'Feedback' }].map(({ id, label }) => (
+          {[
+            { id: "about", label: "About Us" },
+            { id: "projects", label: "Projects" },
+            { id: "feedback", label: "Feedback" },
+          ].map(({ id, label }) => (
             <Button
               key={id}
               onClick={() => scrollTo(id)}
               sx={{
-				position: 'relative',
-				color: activeSection === id ? '#C5B0CD' : '#F3E2D4',
-				textTransform: 'none',
-				fontWeight: 300,
-				whiteSpace: 'nowrap',
-				fontSize: { xs: '0.95rem', md: '1.25rem' },
-				px: 0,
-				minWidth: 0,
-				'&:after': {
-					content: '""',
-					position: 'absolute',
-					left: 0,
-					bottom: { xs: 0, md: -1 },
-					width: activeSection === id ? '100%' : '0%',
-					height: '1.5px',
-					backgroundColor: '#C5B0CD',
-					transition: 'width 0.3s ease',
-				},
-				'&:hover': {
-					color: '#C5B0CD',
-					'&:after': { width: '100%' },
-				},
-			  }}
+                position: "relative",
+                color: activeSection === id ? "#C5B0CD" : "#F3E2D4",
+                textTransform: "none",
+                fontWeight: 300,
+                whiteSpace: "nowrap",
+                fontSize: { xs: "0.95rem", md: "1.25rem" },
+                px: 0,
+                minWidth: 0,
+                "&:after": {
+                  content: '""',
+                  position: "absolute",
+                  left: 0,
+                  bottom: { xs: 0, md: -1 },
+                  width: activeSection === id ? "100%" : "0%",
+                  height: "1.5px",
+                  backgroundColor: "#C5B0CD",
+                  transition: "width 0.3s ease",
+                },
+                "&:hover": {
+                  color: "#C5B0CD",
+                  "&:after": { width: "100%" },
+                },
+              }}
             >
               {label}
             </Button>
@@ -132,7 +137,7 @@ const Navbar = () => {
         </Box>
       </Toolbar>
     </AppBar>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
