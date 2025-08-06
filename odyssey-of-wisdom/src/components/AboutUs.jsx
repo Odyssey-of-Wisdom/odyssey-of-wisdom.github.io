@@ -211,18 +211,9 @@ const AboutUs = () => (
 				variant="body2"
 				color="text.secondary"
 				sx={{
-					display: '-webkit-box',
-					WebkitBoxOrient: 'vertical',
-					WebkitLineClamp: {
-					xs: 6,
-					sm: 8,
-					},
-					overflow: 'hidden',
-					textOverflow: 'ellipsis',
-					minHeight: {
-					xs: '6.6em',
-					sm: '7em',
-					},
+					overflowWrap: 'break-word',
+					minHeight: 'auto',
+					whiteSpace: 'normal',
 				}}
 				>
 				{person.bio}
