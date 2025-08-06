@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f74bff9f.css",
-    "main.js": "/static/js/main.222351ee.js",
+    "main.js": "/static/js/main.1447408d.js",
     "static/media/romania1_2.png": "/static/media/romania1_2.e8d5d199c33120dd2ecc.png",
     "static/media/romania2.jpg": "/static/media/romania2.8e29eea1c5da12ce911b.jpg",
     "static/media/romania1_3.png": "/static/media/romania1_3.53982d9cf0e7dc108209.png",
@@ -14,7 +14,6 @@
     "static/media/romania2_2.jpg": "/static/media/romania2_2.ebfdcffafcdf098db41d.jpg",
     "static/media/giorgos.jpg": "/static/media/giorgos.e5d55ef9a8f18c1a0abe.jpg",
     "static/media/antonis.jpg": "/static/media/antonis.3206fd5023b5386267ca.jpg",
-    "static/media/logo2.png": "/static/media/logo2.9aa3119d76d24776ded2.png",
     "static/media/logo3.png": "/static/media/logo3.e4607094d950ad6eb4b0.png",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -22,10 +21,10 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.f74bff9f.css.map": "/static/css/main.f74bff9f.css.map",
-    "main.222351ee.js.map": "/static/js/main.222351ee.js.map"
+    "main.1447408d.js.map": "/static/js/main.1447408d.js.map"
   },
   "entrypoints": [
     "static/css/main.f74bff9f.css",
-    "static/js/main.222351ee.js"
+    "static/js/main.1447408d.js"
   ]
 }
