@@ -1,1 +1,1 @@
-# Odyssey-of-Wisdom
+# Odyssey of Wisdom
