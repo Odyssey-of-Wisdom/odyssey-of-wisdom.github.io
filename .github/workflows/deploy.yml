@@ -27,11 +27,11 @@ jobs:
         run: npm run build
 
       - name: Add CNAME
-        run: echo "odyssayofwisdom.eu" > build/CNAME
+        run: echo "odysseyofwisdom.eu" > build/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          cname: odyssayofwisdom.eu
+          cname: odysseyofwisdom.eu
