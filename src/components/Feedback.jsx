@@ -4,9 +4,11 @@ import { Typography, Box } from "@mui/material";
 const Feedback = () => {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://static.elfsight.com/platform/platform.js";
-    script.async = true;
+    script.src = "https://featurable.com/assets/bundle.js";
+    script.defer = true;
+    script.charset = "UTF-8";
     document.body.appendChild(script);
+
     return () => {
       document.body.removeChild(script);
     };
@@ -20,8 +22,8 @@ const Feedback = () => {
 
       <Box sx={{ mb: 8, textAlign: "center" }}>
         <div
-          className="elfsight-app-98575e3a-92ec-400a-9538-4c4f3948ab14"
-          data-elfsight-app-lazy
+          id="featurable-58353cf0-81f2-4230-869f-e1c8f76ace44"
+          data-featurable-async
         ></div>
       </Box>
     </Box>
