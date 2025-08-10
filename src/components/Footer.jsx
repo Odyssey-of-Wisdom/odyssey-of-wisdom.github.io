@@ -2,6 +2,7 @@ import { Box, Typography, IconButton, Stack } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Footer = () => (
   <Box
@@ -66,6 +67,24 @@ const Footer = () => (
         </IconButton>
         <Typography variant="caption" display="block">
           Email
+        </Typography>
+      </Box>
+
+      <Box textAlign="center">
+        <IconButton
+          href="https://wa.me/306934347747"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            color: "#C5B0CD",
+            transition: "color 0.3s",
+            "&:hover": { color: "#F3E2D4" },
+          }}
+        >
+          <WhatsAppIcon fontSize="large" />
+        </IconButton>
+        <Typography variant="caption" display="block">
+          WhatsApp
         </Typography>
       </Box>
     </Stack>
