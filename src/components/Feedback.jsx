@@ -4,9 +4,9 @@ import { Typography, Box } from "@mui/material";
 const Feedback = () => {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://featurable.com/assets/bundle.js";
-    script.defer = true;
-    script.charset = "UTF-8";
+    script.src = "https://embedsocial.com/cdn/aht.js";
+    script.async = true;
+    script.id = "EmbedSocialWidgetScript";
     document.body.appendChild(script);
 
     return () => {
@@ -22,9 +22,22 @@ const Feedback = () => {
 
       <Box sx={{ mb: 8, textAlign: "center" }}>
         <div
-          id="featurable-58353cf0-81f2-4230-869f-e1c8f76ace44"
-          data-featurable-async
-        ></div>
+          className="embedsocial-widget"
+          data-ref="1c2901332f2d3eaeb842c3e2fde65a6a"
+        >
+          <a
+            href="https://embedsocial.com/google-reviews-widget/"
+            title="Add Google reviews on a website"
+            target="_blank"
+            className="powered-by-es es-feed es-feed-no-pagination"
+          >
+            <img
+              src="https://embedsocial.com/cdn/icon/embedsocial-logo.webp"
+              alt="EmbedSocial"
+            />
+            <span> Google reviews widget </span>
+          </a>
+        </div>
       </Box>
     </Box>
   );
