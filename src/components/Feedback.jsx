@@ -29,6 +29,7 @@ const Feedback = () => {
             href="https://embedsocial.com/google-reviews-widget/"
             title="Add Google reviews on a website"
             target="_blank"
+            rel="noopener noreferrer"
             className="powered-by-es es-feed es-feed-no-pagination"
           >
             <img
