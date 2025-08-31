@@ -95,8 +95,7 @@ const AboutUs = () => (
       <Grid container spacing={2} justifyContent="center" mb={6}>
         {[
           'Soft Skills', 'Artificial Intelligence', 'Sustainability', 'Democracy & Active Citizenship',
-          'European Identity', 'Media & Communication', 'Entrepreneurship', 'Environment',
-          'Leadership', 'Non-formal Learning', 'Intercultural Dialogue', 'Sports'
+          'European Identity', 'Non-formal Learning'
         ].map((topic) => (
           <Grid item key={topic}>
             <Chip
