@@ -20,7 +20,7 @@ export const cofounders = [
   {
     name: "Antonis Kalantzis",
     image: antonisImg,
-    bio: `Antonis is an IT student with experience teaching coding and gaming. With expertise in AI, he co-founded Odyssey of Wisdom to inspire youth through technology and intercultural collaboration.`,
+    bio: `Antonis is a technology enthusiast with interests in cloud computing, AI agents, and emerging innovations. As co-founder of Odyssey of Wisdom, he works to inspire youth through technology and collaboration.`,
   },
   {
     name: "Giorgos Tsitlakidis",
