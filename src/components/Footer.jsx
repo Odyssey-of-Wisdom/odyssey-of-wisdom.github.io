@@ -20,7 +20,7 @@ const Footer = () => (
     <Stack direction="row" justifyContent="center" spacing={4} mt={2}>
       <Box textAlign="center">
         <IconButton
-          href="https://www.instagram.com/oddysey_of_wisdom/"
+          href="https://www.instagram.com/odyssey.of.wisdom/"
           target="_blank"
           rel="noopener noreferrer"
           sx={{
