@@ -4,6 +4,9 @@ import romania1_3 from "../assets/romania1_3.png";
 import romania2 from "../assets/romania2.jpg";
 import romania2_2 from "../assets/romania2_2.jpg";
 import romania2_3 from "../assets/romania2_3.jpg";
+import romania3 from "../assets/romania3.jpg";
+import romania3_2 from "../assets/romania3_2.jpg";
+import romania3_3 from "../assets/romania3_3.jpg";
 
 export const projects = [
   {
@@ -50,5 +53,21 @@ export const projects = [
 	Thank you to all the amazing participants for bringing energy, ideas, and passion to the table! 🌟
 	Also, many thanks to <a href="https://instagram.com/ofensiva_tinerilor" target="_blank">@ofensiva_tinerilor</a> for their excellent organized and insightful project!
 `,
+  },
+  {
+    title: "Peers for Inclusivity – Creating Inclusive Learning Environments",
+    location: "Arad, Romania",
+    date: "March 2025",
+    image: romania3,
+    images: [romania3_2, romania3_3],
+    briefDescription:
+      "An Erasmus+ training in Arad exploring tools, practices, and methodologies for building inclusive learning environments across Europe.",
+    description: `🌍 Our organization joined the "Peers for Inclusivity – Creating Inclusive Learning Environments" Erasmus+ training course in Arad, Romania.  
+
+	📚 For 8 days, participants from across Europe exchanged ideas, methodologies, and practices on how to create more inclusive learning environments. Through theory and experiential workshops, the course equipped us with inspiration and important tools to take steps towards more accessible and fair educational practices. 💡  
+
+	🗺️ The experience through the lens of our participants:  
+
+	🗣 "Grateful to have taken part in an eye-opening training course that gave me the opportunity to learn more about disability and inclusivity, evolve as an educator and connect with passionate youth workers from all over the world!" – Chrysa`,
   },
 ];
