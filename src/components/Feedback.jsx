@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { Typography, Box } from "@mui/material";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Feedback = () => {
+  const { t } = useLanguage();
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://embedsocial.com/cdn/aht.js";
@@ -10,14 +13,16 @@ const Feedback = () => {
     document.body.appendChild(script);
 
     return () => {
-      document.body.removeChild(script);
+      try {
+        document.body.removeChild(script);
+      } catch {}
     };
   }, []);
 
   return (
     <Box id="feedback" sx={{ py: 10, px: 4 }}>
       <Typography variant="h3" textAlign="center" mb={4} color="#17313E">
-        What Youth Say
+        {t("What Youth Say")}
       </Typography>
 
       <Box sx={{ mb: 8, textAlign: "center" }}>
@@ -27,7 +32,7 @@ const Feedback = () => {
         >
           <a
             href="https://embedsocial.com/google-reviews-widget/"
-            title="Add Google reviews on a website"
+            title={t("Add Google reviews on a website")}
             target="_blank"
             rel="noopener noreferrer"
             className="powered-by-es es-feed es-feed-no-pagination"
@@ -36,7 +41,7 @@ const Feedback = () => {
               src="https://embedsocial.com/cdn/icon/embedsocial-logo.webp"
               alt="EmbedSocial"
             />
-            <span> Google reviews widget </span>
+            <span> {t("Google reviews widget")} </span>
           </a>
         </div>
       </Box>

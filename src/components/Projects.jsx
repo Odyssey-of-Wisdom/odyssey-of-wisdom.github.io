@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   Box,
   Typography,
@@ -6,18 +6,22 @@ import {
   CardMedia,
   CardContent,
   Stack,
-} from '@mui/material'
-import { Link } from 'react-router-dom'
-import { projects } from '../data/projects'
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
-import LocationOnIcon from '@mui/icons-material/LocationOn'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+} from "@mui/material";
+import { Link } from "react-router-dom";
+import { projects } from "../data/projects";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { styled } from "@mui/material/styles";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const slugify = (text) =>
-  text.toLowerCase().replace(/[^\w ]+/g, '').replace(/ +/g, '-')
+  text
+    .toLowerCase()
+    .replace(/[^\w ]+/g, "")
+    .replace(/ +/g, "-");
 
 const projectsWithSlugs = projects.map((p) => ({
   ...p,
@@ -52,8 +56,9 @@ const CustomSlider = styled(Slider)({
   },
 });
 
-
 const Projects = () => {
+  const { t, lang } = useLanguage();
+
   return (
     <Box
       id="projects"
@@ -77,7 +82,7 @@ const Projects = () => {
           letterSpacing: "0.5px",
         }}
       >
-        Our Projects
+        {t("Our Projects")}
       </Typography>
 
       <Box
@@ -106,127 +111,139 @@ const Projects = () => {
               >
                 {projectsWithSlugs
                   .slice(slideIndex * 2, slideIndex * 2 + 2)
-                  .map((p, index, arr) => (
-                    <Box
-                      key={p.title}
-                      sx={{
-                        maxWidth: "1100px",
-                        margin: "0 auto",
-                        mb: index < arr.length - 1 ? 6 : 0,
-                      }}
-                    >
-                      <Card
-                        elevation={3}
+                  .map((p, index, arr) => {
+                    const title =
+                      lang === "el" ? p.title_el || p.title : p.title;
+                    const date = lang === "el" ? p.date_el || p.date : p.date;
+                    const location =
+                      lang === "el" ? p.location_el || p.location : p.location;
+                    const brief =
+                      lang === "el"
+                        ? p.briefDescription_el || p.briefDescription
+                        : p.briefDescription;
+
+                    return (
+                      <Box
+                        key={p.title}
                         sx={{
-                          display: "flex",
-                          flexDirection: {
-                            xs: "column",
-                            md:
-                              (slideIndex * 2 + index) % 2 === 0
-                                ? "row"
-                                : "row-reverse",
-                          },
-                          borderRadius: 5,
-                          overflow: "hidden",
-                          backgroundColor: "#FFFFFF",
+                          maxWidth: "1100px",
+                          margin: "0 auto",
+                          mb: index < arr.length - 1 ? 6 : 0,
                         }}
                       >
-                        <CardMedia
-                          component="img"
-                          image={p.image}
-                          alt={p.title}
+                        <Card
+                          elevation={3}
                           sx={{
-                            width: { xs: "100%", md: "40%" },
-                            height: { xs: 220, md: 320 },
-                            objectFit: "cover",
-                          }}
-                        />
-
-                        <CardContent
-                          sx={{
-                            px: { xs: 3, md: 4 },
-                            py: { xs: 3, md: 4 },
                             display: "flex",
-                            flexDirection: "column",
-                            justifyContent: "space-between",
-                            width: { md: "60%" },
+                            flexDirection: {
+                              xs: "column",
+                              md:
+                                (slideIndex * 2 + index) % 2 === 0
+                                  ? "row"
+                                  : "row-reverse",
+                            },
+                            borderRadius: 5,
+                            overflow: "hidden",
+                            backgroundColor: "#FFFFFF",
                           }}
                         >
-                          <Typography
-                            variant="h6"
-                            sx={{ fontWeight: 500, color: "#5A3E61", mb: 1 }}
-                          >
-                            {p.title}
-                          </Typography>
-
-                          <Stack direction="row" spacing={2} mb={2}>
-                            <Stack
-                              direction="row"
-                              spacing={1}
-                              alignItems="center"
-                            >
-                              <CalendarMonthIcon fontSize="small" />
-                              <Typography variant="caption" color="#6E4D74">
-                                {p.date}
-                              </Typography>
-                            </Stack>
-                            <Stack
-                              direction="row"
-                              spacing={1}
-                              alignItems="center"
-                            >
-                              <LocationOnIcon fontSize="small" />
-                              <Typography variant="caption" color="#6E4D74">
-                                {p.location}
-                              </Typography>
-                            </Stack>
-                          </Stack>
-                          <Typography
-                            variant="body2"
+                          <CardMedia
+                            component="img"
+                            image={p.image}
+                            alt={p.title}
                             sx={{
-                              fontWeight: 300,
-                              color: "#3A2F3B",
-                              lineHeight: 1.6,
-                              fontSize: "0.9rem",
-                              mb: 2,
+                              width: { xs: "100%", md: "40%" },
+                              height: { xs: 220, md: 320 },
+                              objectFit: "cover",
+                            }}
+                          />
+
+                          <CardContent
+                            sx={{
+                              px: { xs: 3, md: 4 },
+                              py: { xs: 3, md: 4 },
+                              display: "flex",
+                              flexDirection: "column",
+                              justifyContent: "space-between",
+                              width: { md: "60%" },
                             }}
                           >
-                            {p.briefDescription}
-                          </Typography>
-                          <Box sx={{ mt: 2 }}>
-                            <Link
-                              to={`/projects/${p.slug}`}
-                              style={{ textDecoration: "none" }}
+                            <Typography
+                              variant="h6"
+                              sx={{ fontWeight: 500, color: "#5A3E61", mb: 1 }}
                             >
-                              <Box
-                                component="span"
-                                sx={{
-                                  display: "inline-block",
-                                  px: 2,
-                                  py: 0.8,
-                                  borderRadius: 2,
-                                  fontSize: "0.8rem",
-                                  fontWeight: 500,
-                                  backgroundColor: "#E5D4EA",
-                                  color: "#5A3E61",
-                                  textAlign: "center",
-                                  cursor: "pointer",
-                                  alignSelf: "start",
-                                  transition: "all 0.3s ease",
-                                  "&:hover": {
-                                    backgroundColor: "#D6C0E1",
-                                    transform: "scale(1.05)",
-                                  },
-                                }}
+                              {title}
+                            </Typography>
+
+                            <Stack direction="row" spacing={2} mb={2}>
+                              <Stack
+                                direction="row"
+                                spacing={1}
+                                alignItems="center"
                               >
-                                See more →
-                              </Box>
-                            </Link>
-                          </Box>
-                        </CardContent>
-                      </Card>
-                    </Box>
-                  ))}
+                                <CalendarMonthIcon fontSize="small" />
+                                <Typography variant="caption" color="#6E4D74">
+                                  {date}
+                                </Typography>
+                              </Stack>
+                              <Stack
+                                direction="row"
+                                spacing={1}
+                                alignItems="center"
+                              >
+                                <LocationOnIcon fontSize="small" />
+                                <Typography variant="caption" color="#6E4D74">
+                                  {location}
+                                </Typography>
+                              </Stack>
+                            </Stack>
+                            <Typography
+                              variant="body2"
+                              sx={{
+                                fontWeight: 300,
+                                color: "#3A2F3B",
+                                lineHeight: 1.6,
+                                fontSize: "0.9rem",
+                                mb: 2,
+                              }}
+                            >
+                              {brief}
+                            </Typography>
+                            <Box sx={{ mt: 2 }}>
+                              <Link
+                                to={`/projects/${p.slug}`}
+                                style={{ textDecoration: "none" }}
+                              >
+                                <Box
+                                  component="span"
+                                  sx={{
+                                    display: "inline-block",
+                                    px: 2,
+                                    py: 0.8,
+                                    borderRadius: 2,
+                                    fontSize: "0.8rem",
+                                    fontWeight: 500,
+                                    backgroundColor: "#E5D4EA",
+                                    color: "#5A3E61",
+                                    textAlign: "center",
+                                    cursor: "pointer",
+                                    alignSelf: "start",
+                                    transition: "all 0.3s ease",
+                                    "&:hover": {
+                                      backgroundColor: "#D6C0E1",
+                                      transform: "scale(1.05)",
+                                    },
+                                  }}
+                                >
+                                  {t("See more →")}
+                                </Box>
+                              </Link>
+                            </Box>
+                          </CardContent>
+                        </Card>
+                      </Box>
+                    );
+                  })}
               </Box>
             )
           )}
@@ -252,6 +269,6 @@ const Projects = () => {
       </Box>
     </Box>
   );
-}
+};
 
-export default Projects
+export default Projects;
