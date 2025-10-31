@@ -49,7 +49,6 @@ const translations = {
   "← Back to Projects": { el: "← Πίσω στα προγράμματα" },
 
   Home: { el: "Αρχική" },
-  Projects: { el: "Προγράμματα" },
 
   "What Youth Say": { el: "Τι λένε για μας" },
   "Google reviews widget": { el: "Ενότητα κριτικών Google" },
