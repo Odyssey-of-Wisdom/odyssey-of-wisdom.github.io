@@ -10,7 +10,7 @@ import {
 import { useLanguage } from "../contexts/LanguageContext";
 
 const Flag = ({ code, sx = {} }) => (
-  <Box component="span" sx={{ fontSize: 18, lineHeight: 1, ...sx }} aria-hidden>
+  <Box component="span" sx={{ fontSize: 15, lineHeight: 1, ...sx }} aria-hidden>
     {code}
   </Box>
 );
@@ -52,7 +52,7 @@ export default function LanguageSwitcher() {
         aria-label="Choose language"
       >
         <Flag code={lang === "en" ? "🇬🇧" : "🇬🇷"} />
-        <Typography sx={{ fontSize: 14 }}>
+        <Typography sx={{ fontSize: 13 }}>
           {lang === "en" ? "EN" : "ΕΛ"}
         </Typography>
       </Button>
