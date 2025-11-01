@@ -91,20 +91,6 @@ const Hero = () => {
       </Box>
 
       <Box
-        sx={{
-          position: "absolute",
-          top: "-20%",
-          right: "-10%",
-          width: { xs: 200, md: 300 },
-          height: { xs: 200, md: 300 },
-          bgcolor: "rgba(243,226,212,0.25)",
-          borderRadius: "50%",
-          zIndex: 3,
-          filter: "blur(8px)",
-        }}
-      />
-
-      <Box
         component="img"
         src={Logo}
         alt="Odyssey Logo"
