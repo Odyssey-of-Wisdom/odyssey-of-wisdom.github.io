@@ -1,4 +1,3 @@
-// src/components/LanguageSwitcher.jsx
 import React, { useState } from "react";
 import {
   Button,
@@ -38,16 +37,17 @@ export default function LanguageSwitcher() {
         sx={{
           textTransform: "none",
           minWidth: 0,
-          px: 1,
-          py: 0.4,
-          fontWeight: 600,
+          px: 0.4,
+          py: 0.2,
+          fontWeight: 500,
           color: "#F3E2D4",
-          borderRadius: 2,
+          borderRadius: 1,
           background: "transparent",
-          "&:hover": { background: "rgba(255,255,255,0.04)" },
+          "&:hover": { background: "rgba(255,255,255,0.02)" },
           display: "flex",
-          gap: 1,
+          gap: 0.4,
           alignItems: "center",
+          fontSize: 10,
         }}
         aria-label="Choose language"
       >
