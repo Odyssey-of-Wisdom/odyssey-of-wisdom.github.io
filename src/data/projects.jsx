@@ -13,8 +13,29 @@ import poland1_3 from "../assets/poland1_3.png"
 import italy1 from "../assets/italy1.png";
 import italy1_2 from "../assets/italy1_2.png";
 import italy1_3 from "../assets/italy1_3.png";
+import italy2 from "../assets/italy2.png";
+import italy2_2 from "../assets/italy2_2.png";
+import italy2_3 from "../assets/italy2_3.png";
 
 export const projects = [
+  {
+    title: "Food for Youth Connections",
+    title_el: "Food for Youth Connections",
+    location: "San Cesario di Lecce, Italy",
+    location_el: "San Cesario di Lecce, Ιταλία",
+    date: "October 2025",
+    date_el: "Οκτώβριος 2025",
+    image: italy2,
+    images: [italy2_2, italy2_3],
+    briefDescription:
+      "In October, young people from Italy, Spain, Greece, and Ukraine met in Southern Italy to explore how food can become a bridge for sustainability, creativity, and real human connection.",
+    briefDescription_el:
+      "Τον Οκτώβριο, νέοι από την Ιταλία, την Ισπανία, την Ελλάδα και την Ουκρανία συναντήθηκαν στη Νότια Ιταλία για να εξερευνήσουν πώς το φαγητό μπορεί να γίνει εργαλείο βιωσιμότητας, δημιουργικότητας και ουσιαστικής σύνδεσης.",
+    description:
+      "🫒🫛🥕 This October, 24 people from Italy, Spain, Greece and Ukraine came together in San Cesario di Lecce, in Southern Italy, to explore food as a tool for sustainability, creativity and community building.\n\nIn \"Food for Youth Connections\" the Greek team shared more than recipes. As their perspective on food and community values unravelled, they truly found connection in heartful meals and eachothers' collaboration.\n\nIt was a week full of flavors, stories and memories.\n\n💬 What participants shared:\n\nFood became more than a daily routine, it turned into a shared language.\n\nThrough cooking together, we descovered how traditions, values and stories can connect people beyond borders.\n\nSharing meals meant sharing responsibilities and meaningful conversations.\n\nLocal workshops on aromantic herbs and native plants helped us reconnect with nature and the land.\n\nLet's continue our odyssey! ⛵",
+    description_el:
+      "🫒🫛🥕 Τον Οκτώβριο, 24 νέοι από την Ιταλία, την Ισπανία, την Ελλάδα και την Ουκρανία συναντήθηκαν στο San Cesario di Lecce, στη Νότια Ιταλία, για να δουν το φαγητό ως εργαλείο βιωσιμότητας, δημιουργικότητας και κοινότητας.\n\nΣτο \"Food for Youth Connections\" η ελληνική ομάδα μοιράστηκε κάτι περισσότερο από συνταγές. Μέσα από τη δική της οπτική για το φαγητό και τις αξίες της κοινότητας, δημιουργήθηκαν αληθινές συνδέσεις μέσα από γεύματα φτιαγμένα με αγάπη και συνεργασία.\n\nΉταν μια εβδομάδα γεμάτη γεύσεις, ιστορίες και αναμνήσεις.\n\n💬 Τι είπαν οι συμμετέχοντες:\n\nFood became more than a daily routine, it turned into a shared language.\n\nThrough cooking together, we descovered how traditions, values and stories can connect people beyond borders.\n\nSharing meals meant sharing responsibilities and meaningful conversations.\n\nLocal workshops on aromantic herbs and native plants helped us reconnect with nature and the land.\n\nΑς συνεχίσουμε την οδύσσειά μας! ⛵",
+  },
   {
     title: "Food for Youth Connections",
     title_el: "Food for Youth Connections",
