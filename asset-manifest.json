@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f74bff9f.css",
-    "main.js": "/static/js/main.2ed5f3f3.js",
+    "main.js": "/static/js/main.427702fe.js",
     "static/media/flag_photo.jpeg": "/static/media/flag_photo.58c6e338dbbb4ea536ae.jpeg",
     "static/media/romania1_2.png": "/static/media/romania1_2.e8d5d199c33120dd2ecc.png",
     "static/media/poland1_2.png": "/static/media/poland1_2.13ece9b95ce3d118d99a.png",
@@ -11,10 +11,13 @@
     "static/media/italy1.png": "/static/media/italy1.39f311ad0b01ae65981d.png",
     "static/media/romania1_3.png": "/static/media/romania1_3.53982d9cf0e7dc108209.png",
     "static/media/sotiris.png": "/static/media/sotiris.33222b4ba365e21b1022.png",
+    "static/media/italy2.png": "/static/media/italy2.392f47a48d6856f63cce.png",
+    "static/media/italy2_2.png": "/static/media/italy2_2.6f7198afd17d03d06685.png",
     "static/media/italy1_2.png": "/static/media/italy1_2.ea508c080d255b717a6a.png",
     "static/media/romania3_2.jpg": "/static/media/romania3_2.b80b9b3f2f5524412be4.jpg",
     "static/media/vaggelis.jpg": "/static/media/vaggelis.3d98f89b217d75cd719b.jpg",
     "static/media/poland1.png": "/static/media/poland1.44474ba5a13cd3267057.png",
+    "static/media/italy2_3.png": "/static/media/italy2_3.68651f862070ecb46a48.png",
     "static/media/romania2_3.jpg": "/static/media/romania2_3.3a7ceb6e497ab57ac728.jpg",
     "static/media/romania3_3.jpg": "/static/media/romania3_3.b41cb41f2f1b7689aba8.jpg",
     "static/media/romania1.png": "/static/media/romania1.8d6d9bb76f5629d092ad.png",
@@ -32,10 +35,10 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.f74bff9f.css.map": "/static/css/main.f74bff9f.css.map",
-    "main.2ed5f3f3.js.map": "/static/js/main.2ed5f3f3.js.map"
+    "main.427702fe.js.map": "/static/js/main.427702fe.js.map"
   },
   "entrypoints": [
     "static/css/main.f74bff9f.css",
-    "static/js/main.2ed5f3f3.js"
+    "static/js/main.427702fe.js"
   ]
 }
