@@ -16,8 +16,27 @@ import italy1_3 from "../assets/italy1_3.png";
 import italy2 from "../assets/italy2.png";
 import italy2_2 from "../assets/italy2_2.png";
 import italy2_3 from "../assets/italy2_3.png";
+import italy3 from "../assets/italy3.png";
+import italy3_2 from "../assets/italy3_2.png";
+import italy3_3 from "../assets/italy3_3.png";
 
 export const projects = [
+  {
+    title: "Empowering Communities through Participatory Photography",
+    title_el: "Ενδυναμώνοντας Κοινότητες μέσα από τη συμμετοχική φωτογραφία",
+    location: "San Giorgio del Sannio, Italy",
+    location_el: "San Giorgio del Sannio, Ιταλία",
+    date: "November 2025",
+    date_el: "Νοέμβριος 2025",
+    image: italy3,
+    images: [italy3_2, italy3_3],
+    briefDescription:
+      "A 10-day Erasmus+ training in San Giorgio del Sannio where curious minds picked up cameras, told their stories, and ended up connecting with a whole local community through a photography exhibition.",
+	briefDescription_el:
+      "Μια εκπαίδευση 10 ημερών στο Erasmus+ στο San Giorgio del Sannio όπου περιέχονταν από τους ενδιαφερόμενους νους που πήραν κάμερες, μίλησαν τα ιστορίες τους και τελικά συνδέθηκαν με μια ολόκληρη τοπική κοινότητα μέσω μιας φωτογραφικής έκθεσης.",
+	description: "📸🫨 This participatory photography training course in San Giorgio del Sannio, Italy was out of this world.\n\nDuring November, our participants spent 10 days full of creative workshops, hands-on photography, and real engagement with the local community. No professionals — just curious minds and open perspectives, guided by our inspiring facilitators.\n\nCollaboration made all the difference as we turned ideas into visual narratives. And somewhere along the way, sharing our stories meant becoming part of the local community itself.\n\nThe final exhibition was the cherry on top. Locals came by, showed genuine interest, and shared the experience with us — a beautifully human moment of bonding through art while picking up real creative and practical skills.\n\n💬 Here's what Avgoustis had to say:\n\n\"I had an amazing 10 days in Italy through the Erasmus+ project on participatory photography. We explored the city through workshops, worked hands-on with photography, and met incredible people who became friends. The highlight was our photo exhibition where many locals came by, showed interest and shared our experience with us. Truly a special experience.\"\n\nOn to our next odyssey! ✈️",
+	description_el: "📸🫨 Αυτή η εκπαίδευση στη συμμετοχική φωτογραφία στο San Giorgio del Sannio της Ιταλίας ήταν πραγματικά ξεχωριστή.\n\nΚατά τη διάρκεια του Νοεμβρίου, οι συμμετέχοντες πέρασαν 10 μέρες γεμάτες δημιουργικά εργαστήρια, πρακτική ενασχόληση με τη φωτογραφία και πραγματική αλληλεπίδραση με την τοπική κοινότητα. Χωρίς επαγγελματίες — μόνο περιέργεια και ανοιχτό μυαλό, καθοδηγούμενοι από τους εμπνευσμένους μας εκπαιδευτές.\n\nΗ συνεργασία έκανε τη διαφορά καθώς μετατρέψαμε ιδέες σε οπτικές αφηγήσεις. Και κάπου στη διαδρομή, το να μοιραζόμαστε τις ιστορίες μας σήμαινε ότι γίναμε μέρος της τοπικής κοινότητας.\n\nΗ τελική έκθεση ήταν το κερασάκι στην τούρτα. Οι ντόπιοι ήρθαν, έδειξαν πραγματικό ενδιαφέρον και μοιράστηκαν την εμπειρία μαζί μας — μια όμορφη ανθρώπινη στιγμή σύνδεσης μέσω της τέχνης ενώ αποκτούσαμε πραγματικές δημιουργικές και πρακτικές δεξιότητες.\n\n💬 Δείτε τι είπε ο Αυγουστής:\n\n«Πέρασα 10 υπέροχες μέρες στην Ιταλία μέσα από το πρόγραμμα Erasmus+ για τη συμμετοχική φωτογραφία. Εξερευνήσαμε την πόλη μέσα από εργαστήρια, ασχοληθήκαμε πρακτικά με τη φωτογραφία και γνωρίσαμε απίστευτους ανθρώπους που έγιναν φίλοι. Το αποκορύφωμα ήταν η φωτογραφική μας έκθεση όπου πολλοί ντόπιοι ήρθαν, έδειξαν ενδιαφέρον και μοιράστηκαν την εμπειρία μαζί μας. Πραγματικά μια ξεχωριστή εμπειρία.\"\n\nΣτην επόμενη οδύσσειά μας! ✈️",
+  },
   {
     title: "Food for Youth Connections",
     title_el: "Food for Youth Connections",
@@ -34,7 +53,7 @@ export const projects = [
     description:
       "🫒🫛🥕 This October, 24 people from Italy, Spain, Greece and Ukraine came together in San Cesario di Lecce, in Southern Italy, to explore food as a tool for sustainability, creativity and community building.\n\nIn \"Food for Youth Connections\" the Greek team shared more than recipes. As their perspective on food and community values unravelled, they truly found connection in heartful meals and eachothers' collaboration.\n\nIt was a week full of flavors, stories and memories.\n\n💬 What participants shared:\n\nFood became more than a daily routine, it turned into a shared language.\n\nThrough cooking together, we descovered how traditions, values and stories can connect people beyond borders.\n\nSharing meals meant sharing responsibilities and meaningful conversations.\n\nLocal workshops on aromantic herbs and native plants helped us reconnect with nature and the land.\n\nLet's continue our odyssey! ⛵",
     description_el:
-      "🫒🫛🥕 Τον Οκτώβριο, 24 νέοι από την Ιταλία, την Ισπανία, την Ελλάδα και την Ουκρανία συναντήθηκαν στο San Cesario di Lecce, στη Νότια Ιταλία, για να δουν το φαγητό ως εργαλείο βιωσιμότητας, δημιουργικότητας και κοινότητας.\n\nΣτο \"Food for Youth Connections\" η ελληνική ομάδα μοιράστηκε κάτι περισσότερο από συνταγές. Μέσα από τη δική της οπτική για το φαγητό και τις αξίες της κοινότητας, δημιουργήθηκαν αληθινές συνδέσεις μέσα από γεύματα φτιαγμένα με αγάπη και συνεργασία.\n\nΉταν μια εβδομάδα γεμάτη γεύσεις, ιστορίες και αναμνήσεις.\n\n💬 Τι είπαν οι συμμετέχοντες:\n\nFood became more than a daily routine, it turned into a shared language.\n\nThrough cooking together, we descovered how traditions, values and stories can connect people beyond borders.\n\nSharing meals meant sharing responsibilities and meaningful conversations.\n\nLocal workshops on aromantic herbs and native plants helped us reconnect with nature and the land.\n\nΑς συνεχίσουμε την οδύσσειά μας! ⛵",
+      '🫒🫛🥕 Τον Οκτώβριο, 24 νέοι από την Ιταλία, την Ισπανία, την Ελλάδα και την Ουκρανία συναντήθηκαν στο San Cesario di Lecce, στη Νότια Ιταλία, για να δουν το φαγητό ως εργαλείο βιωσιμότητας, δημιουργικότητας και κοινότητας.\n\nΣτο "Food for Youth Connections" η ελληνική ομάδα μοιράστηκε κάτι περισσότερο από συνταγές. Μέσα από τη δική της οπτική για το φαγητό και τις αξίες της κοινότητας, δημιουργήθηκαν αληθινές συνδέσεις μέσα από γεύματα φτιαγμένα με αγάπη και συνεργασία.\n\nΉταν μια εβδομάδα γεμάτη γεύσεις, ιστορίες και αναμνήσεις.\n\n💬 Τι είπαν οι συμμετέχοντες:\n\nFood became more than a daily routine, it turned into a shared language.\n\nThrough cooking together, we descovered how traditions, values and stories can connect people beyond borders.\n\nSharing meals meant sharing responsibilities and meaningful conversations.\n\nLocal workshops on aromantic herbs and native plants helped us reconnect with nature and the land.\n\nΑς συνεχίσουμε την οδύσσειά μας! ⛵',
   },
   {
     title: "Food for Youth Connections",

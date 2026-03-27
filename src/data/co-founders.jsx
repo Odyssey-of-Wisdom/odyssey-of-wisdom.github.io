@@ -3,7 +3,7 @@ import panagiotisImg from "../assets/panagiotis.jpg";
 import iliasImg from "../assets/ilias.jpg";
 import antonisImg from "../assets/antonis.jpg";
 import giorgosImg from "../assets/giorgos.jpg";
-import vaggelisImg from "../assets/vaggelis.jpg";
+import vaggelisImg from "../assets/vaggelis.png";
 import foteiniImg from "../assets/foteini.png";
 import sotirisImg from "../assets/sotiris.png";
 import mariaImg from "../assets/maria.png";
