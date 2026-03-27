@@ -6,6 +6,7 @@ import giorgosImg from "../assets/giorgos.jpg";
 import vaggelisImg from "../assets/vaggelis.jpg";
 import foteiniImg from "../assets/foteini.png";
 import sotirisImg from "../assets/sotiris.png";
+import mariaImg from "../assets/maria.png";
 
 export const cofounders = [
   {
@@ -43,6 +44,12 @@ export const cofounders = [
     image: foteiniImg,
     bio: `Foteini is a special education student, passionate about youth work and storytelling. Curious about cultures, she shares Erasmus+ stories through blogging and social media.`,
     bio_el: `Η Φωτεινή σπουδάζει Ειδική Αγωγή και της αρέσει να δουλεύει με νέους και να αφηγείται ιστορίες. Έχει μεγάλη περιέργεια για τους πολιτισμούς και μοιράζεται εμπειρίες από το Erasmus+ μέσα από το blogging και τα social media.`,
+  },
+  {
+    name: "Maria Gagani",
+    image: mariaImg,
+    bio: `Maria is a Business Administration student and volunteer with a passion for learning. Through Erasmus+ and student organizations, she seeks travel and cultural experiences for her personal fulfillment.`,
+    bio_el: `Η Μαρία σπουδάζει Διοίκηση Επιχειρήσεων και είναι εθελόντρια με πάθος για τη μάθηση. Μέσα από το Erasmus+ και τις φοιτητικές οργανώσεις, αναζητά ταξίδια και πολιτισμικές εμπειρίες για την προσωπική της ολοκλήρωση.`,
   },
   {
     name: "Sotiris Kouroukafopoulos",
