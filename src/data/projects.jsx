@@ -19,8 +19,71 @@ import italy2_3 from "../assets/italy2_3.png";
 import italy3 from "../assets/italy3.png";
 import italy3_2 from "../assets/italy3_2.png";
 import italy3_3 from "../assets/italy3_3.png";
+import romania4 from "../assets/romania4.png";
+import romania4_2 from "../assets/romania4_2.png";
+import romania4_3 from "../assets/romania4_3.png";
+import italy4 from "../assets/italy4.png";
+import italy4_2 from "../assets/italy4_2.png";
+import italy4_3 from "../assets/italy4_3.png";
+import italy5 from "../assets/italy5.png";
+import italy5_2 from "../assets/italy5_2.png";
+import italy5_3 from "../assets/italy5_3.png";
 
 export const projects = [
+  {
+    title: "Rural Beats",
+    title_el: "Rural Beats",
+    location: "Alviano, Italy",
+    location_el: "Αλβιάνο, Ιταλία",
+    date: "June 2026",
+    date_el: "Ιούνιος 2026",
+    image: italy5,
+    images: [italy5_2, italy5_3],
+    briefDescription:
+      "An Erasmus+ Youth Exchange in Alviano, Italy, where young people from rural areas of Greece, Italy, Slovakia and Poland learned how to plan and run their own cultural events.",
+    briefDescription_el:
+      "Ένα Erasmus+ Youth Exchange στο Αλβιάνο της Ιταλίας, όπου νέοι από αγροτικές περιοχές της Ελλάδας, της Ιταλίας, της Σλοβακίας και της Πολωνίας έμαθαν πώς να σχεδιάζουν και να οργανώνουν τις δικές τους πολιτιστικές εκδηλώσεις.",
+    description:
+      "🌴🎶 This June in Alviano was truly special.\n\nWhat happens when young people from Greece, Italy, Slovakia and Poland join forces in a youth exchange about event planning? An unforgettable experience, of course!\n\nIn \"Rural Beats\", young people from rural areas designed their own cultural events from scratch. Through role-playing activities and hands-on preparation, participants learned how to shape their ideas and turn them into meaningful cultural events for their communities.\n\nThe best part? They put everything into practice by helping to organize and plan part of the Utopia Festival, a local initiative created and led by the young people of Alviano.\n\nA week full of music, creativity, teamwork and new friendships, proving that great culture can grow anywhere, not just in big cities.\n\nOn to our next odyssey! ✈️",
+    description_el:
+      "🌴🎶 Αυτός ο Ιούνιος στο Αλβιάνο ήταν πραγματικά ξεχωριστός.\n\nΤι συμβαίνει όταν νέοι από την Ελλάδα, την Ιταλία, τη Σλοβακία και την Πολωνία ενώνουν τις δυνάμεις τους σε μια ανταλλαγή νέων με θέμα την οργάνωση εκδηλώσεων; Μια αξέχαστη εμπειρία, φυσικά!\n\nΣτο \"Rural Beats\", νέοι από αγροτικές περιοχές σχεδίασαν τις δικές τους πολιτιστικές εκδηλώσεις από το μηδέν. Μέσα από παιχνίδια ρόλων και πρακτική προετοιμασία, οι συμμετέχοντες έμαθαν πώς να διαμορφώνουν τις ιδέες τους και να τις μετατρέπουν σε ουσιαστικές πολιτιστικές εκδηλώσεις για τις κοινότητές τους.\n\nΤο καλύτερο; Τα έβαλαν όλα σε πράξη, βοηθώντας στην οργάνωση και τον σχεδιασμό μέρους του Utopia Festival, μιας τοπικής πρωτοβουλίας που δημιουργήθηκε και υλοποιείται από τους νέους του Αλβιάνο.\n\nΜια εβδομάδα γεμάτη μουσική, δημιουργικότητα, ομαδική δουλειά και νέες φιλίες, που απέδειξε ότι ο πολιτισμός μπορεί να ανθίσει παντού, όχι μόνο στις μεγάλες πόλεις.\n\nΣτην επόμενη οδύσσειά μας! ✈️",
+  },
+  {
+    title: "Communities Without Borders",
+    title_el: "Communities Without Borders",
+    location: "Alviano Scalo, Italy",
+    location_el: "Αλβιάνο Σκάλο, Ιταλία",
+    date: "May 2026",
+    date_el: "Μάιος 2026",
+    image: italy4,
+    images: [italy4_2, italy4_3],
+    briefDescription:
+      "A week of learning, sharing cultures and making friends in Alviano Scalo, Italy, where young people from four countries worked together towards positive change across Europe.",
+    briefDescription_el:
+      "Μια εβδομάδα μάθησης, πολιτιστικής ανταλλαγής και νέων φιλιών στο Αλβιάνο Σκάλο της Ιταλίας, όπου νέοι από τέσσερις χώρες συνεργάστηκαν για μια θετική αλλαγή σε όλη την Ευρώπη.",
+    description:
+      "🇮🇹 A week of learning, sharing cultures and making friends in Alviano Scalo, Italy.\n\nThis May, \"Communities Without Borders\" reminded us that culture connects and diversity inspires.\n\nParticipants from four different countries came together to exchange ideas and experiences, and to explore how communities can work together for positive change across Europe.\n\nThrough workshops, group activities and cultural evenings, we discovered how much we have in common, and how much we can learn from our differences. Along the way, strangers became teammates, and teammates became friends.",
+    description_el:
+      "🇮🇹 Μια εβδομάδα μάθησης, πολιτιστικής ανταλλαγής και νέων φιλιών στο Αλβιάνο Σκάλο της Ιταλίας.\n\nΑυτόν τον Μάιο, το \"Communities Without Borders\" μας θύμισε ότι ο πολιτισμός μας ενώνει και η διαφορετικότητα μας εμπνέει.\n\nΣυμμετέχοντες από τέσσερις διαφορετικές χώρες συναντήθηκαν για να ανταλλάξουν ιδέες και εμπειρίες και να εξερευνήσουν πώς οι κοινότητες μπορούν να συνεργαστούν για μια θετική αλλαγή σε όλη την Ευρώπη.\n\nΜέσα από εργαστήρια, ομαδικές δραστηριότητες και πολιτιστικές βραδιές, ανακαλύψαμε πόσα κοινά έχουμε και πόσα μπορούμε να μάθουμε από τις διαφορές μας. Στην πορεία, οι άγνωστοι έγιναν συνεργάτες και οι συνεργάτες φίλοι.",
+  },
+  {
+    title: "Storytelling for Inclusion",
+    title_el: "Storytelling for Inclusion",
+    location: "Băile Govora, Romania",
+    location_el: "Băile Govora, Ρουμανία",
+    date: "April 2026",
+    date_el: "Απρίλιος 2026",
+    image: romania4,
+    images: [romania4_2, romania4_3],
+    briefDescription:
+      "An 8-day Erasmus+ training course in Băile Govora, Romania, where participants used personal stories to challenge stereotypes and take steps towards more inclusive and diverse spaces.",
+    briefDescription_el:
+      "Ένα 8ήμερο εκπαιδευτικό σεμινάριο Erasmus+ στο Băile Govora της Ρουμανίας, όπου οι συμμετέχοντες χρησιμοποίησαν προσωπικές ιστορίες για να αμφισβητήσουν στερεότυπα και να κάνουν βήματα προς πιο συμπεριληπτικούς και πολυπολιτισμικούς χώρους.",
+    description:
+      "🔗🖼️ This April was a month full of connection and personal stories.\n\nIn \"Storytelling for Inclusion\", our team members Vicky and Maria attended an 8-day training course in Băile Govora, Romania, combining meaningful workshops, creative expression and practical steps towards inclusive and diverse spaces.\n\nParticipants from different countries came together, and the multicultural energy connected everyone instantly. Through storytelling, they shared personal experiences that challenge stereotypes and explored what it really means to listen.\n\nBy exchanging cultures and ideas, participants built strong bonds and friendships, and left with new perspectives and the habit of listening with an open mind.",
+    description_el:
+      "🔗🖼️ Αυτός ο Απρίλιος ήταν ένας μήνας γεμάτος σύνδεση και προσωπικές ιστορίες.\n\nΣτο \"Storytelling for Inclusion\", τα μέλη της ομάδας μας Βίκυ και Μαρία συμμετείχαν σε ένα 8ήμερο εκπαιδευτικό σεμινάριο στο Băile Govora της Ρουμανίας, που συνδύαζε ουσιαστικά εργαστήρια, δημιουργική έκφραση και πρακτικά βήματα προς πιο συμπεριληπτικούς και πολυπολιτισμικούς χώρους.\n\nΣυμμετέχοντες από διαφορετικές χώρες συναντήθηκαν και η πολυπολιτισμική ενέργεια ένωσε αμέσως όλους. Μέσα από την αφήγηση ιστοριών, μοιράστηκαν προσωπικές εμπειρίες που αμφισβητούν τα στερεότυπα και εξερεύνησαν τι σημαίνει πραγματικά να ακούς.\n\nΑνταλλάσσοντας πολιτισμούς και ιδέες, οι συμμετέχοντες δημιούργησαν δυνατούς δεσμούς και φιλίες και έφυγαν με νέες οπτικές και τη συνήθεια να ακούν με ανοιχτό μυαλό.",
+  },
   {
     title: "Empowering Communities through Participatory Photography",
     title_el: "Ενδυναμώνοντας Κοινότητες μέσα από τη συμμετοχική φωτογραφία",
@@ -32,10 +95,10 @@ export const projects = [
     images: [italy3_2, italy3_3],
     briefDescription:
       "A 10-day Erasmus+ training in San Giorgio del Sannio where curious minds picked up cameras, told their stories, and ended up connecting with a whole local community through a photography exhibition.",
-	briefDescription_el:
+    briefDescription_el:
       "Μια εκπαίδευση 10 ημερών στο Erasmus+ στο San Giorgio del Sannio όπου περιέχονταν από τους ενδιαφερόμενους νους που πήραν κάμερες, μίλησαν τα ιστορίες τους και τελικά συνδέθηκαν με μια ολόκληρη τοπική κοινότητα μέσω μιας φωτογραφικής έκθεσης.",
-	description: "📸🫨 This participatory photography training course in San Giorgio del Sannio, Italy was out of this world.\n\nDuring November, our participants spent 10 days full of creative workshops, hands-on photography, and real engagement with the local community. No professionals — just curious minds and open perspectives, guided by our inspiring facilitators.\n\nCollaboration made all the difference as we turned ideas into visual narratives. And somewhere along the way, sharing our stories meant becoming part of the local community itself.\n\nThe final exhibition was the cherry on top. Locals came by, showed genuine interest, and shared the experience with us — a beautifully human moment of bonding through art while picking up real creative and practical skills.\n\n💬 Here's what Avgoustis had to say:\n\n\"I had an amazing 10 days in Italy through the Erasmus+ project on participatory photography. We explored the city through workshops, worked hands-on with photography, and met incredible people who became friends. The highlight was our photo exhibition where many locals came by, showed interest and shared our experience with us. Truly a special experience.\"\n\nOn to our next odyssey! ✈️",
-	description_el: "📸🫨 Αυτή η εκπαίδευση στη συμμετοχική φωτογραφία στο San Giorgio del Sannio της Ιταλίας ήταν πραγματικά ξεχωριστή.\n\nΚατά τη διάρκεια του Νοεμβρίου, οι συμμετέχοντες πέρασαν 10 μέρες γεμάτες δημιουργικά εργαστήρια, πρακτική ενασχόληση με τη φωτογραφία και πραγματική αλληλεπίδραση με την τοπική κοινότητα. Χωρίς επαγγελματίες — μόνο περιέργεια και ανοιχτό μυαλό, καθοδηγούμενοι από τους εμπνευσμένους μας εκπαιδευτές.\n\nΗ συνεργασία έκανε τη διαφορά καθώς μετατρέψαμε ιδέες σε οπτικές αφηγήσεις. Και κάπου στη διαδρομή, το να μοιραζόμαστε τις ιστορίες μας σήμαινε ότι γίναμε μέρος της τοπικής κοινότητας.\n\nΗ τελική έκθεση ήταν το κερασάκι στην τούρτα. Οι ντόπιοι ήρθαν, έδειξαν πραγματικό ενδιαφέρον και μοιράστηκαν την εμπειρία μαζί μας — μια όμορφη ανθρώπινη στιγμή σύνδεσης μέσω της τέχνης ενώ αποκτούσαμε πραγματικές δημιουργικές και πρακτικές δεξιότητες.\n\n💬 Δείτε τι είπε ο Αυγουστής:\n\n«Πέρασα 10 υπέροχες μέρες στην Ιταλία μέσα από το πρόγραμμα Erasmus+ για τη συμμετοχική φωτογραφία. Εξερευνήσαμε την πόλη μέσα από εργαστήρια, ασχοληθήκαμε πρακτικά με τη φωτογραφία και γνωρίσαμε απίστευτους ανθρώπους που έγιναν φίλοι. Το αποκορύφωμα ήταν η φωτογραφική μας έκθεση όπου πολλοί ντόπιοι ήρθαν, έδειξαν ενδιαφέρον και μοιράστηκαν την εμπειρία μαζί μας. Πραγματικά μια ξεχωριστή εμπειρία.\"\n\nΣτην επόμενη οδύσσειά μας! ✈️",
+    description: "📸🫨 This participatory photography training course in San Giorgio del Sannio, Italy was out of this world.\n\nDuring November, our participants spent 10 days full of creative workshops, hands-on photography, and real engagement with the local community. No professionals — just curious minds and open perspectives, guided by our inspiring facilitators.\n\nCollaboration made all the difference as we turned ideas into visual narratives. And somewhere along the way, sharing our stories meant becoming part of the local community itself.\n\nThe final exhibition was the cherry on top. Locals came by, showed genuine interest, and shared the experience with us — a beautifully human moment of bonding through art while picking up real creative and practical skills.\n\n💬 Here's what Avgoustis had to say:\n\n\"I had an amazing 10 days in Italy through the Erasmus+ project on participatory photography. We explored the city through workshops, worked hands-on with photography, and met incredible people who became friends. The highlight was our photo exhibition where many locals came by, showed interest and shared our experience with us. Truly a special experience.\"",
+    description_el: "📸🫨 Αυτή η εκπαίδευση στη συμμετοχική φωτογραφία στο San Giorgio del Sannio της Ιταλίας ήταν πραγματικά ξεχωριστή.\n\nΚατά τη διάρκεια του Νοεμβρίου, οι συμμετέχοντες πέρασαν 10 μέρες γεμάτες δημιουργικά εργαστήρια, πρακτική ενασχόληση με τη φωτογραφία και πραγματική αλληλεπίδραση με την τοπική κοινότητα. Χωρίς επαγγελματίες — μόνο περιέργεια και ανοιχτό μυαλό, καθοδηγούμενοι από τους εμπνευσμένους μας εκπαιδευτές.\n\nΗ συνεργασία έκανε τη διαφορά καθώς μετατρέψαμε ιδέες σε οπτικές αφηγήσεις. Και κάπου στη διαδρομή, το να μοιραζόμαστε τις ιστορίες μας σήμαινε ότι γίναμε μέρος της τοπικής κοινότητας.\n\nΗ τελική έκθεση ήταν το κερασάκι στην τούρτα. Οι ντόπιοι ήρθαν, έδειξαν πραγματικό ενδιαφέρον και μοιράστηκαν την εμπειρία μαζί μας — μια όμορφη ανθρώπινη στιγμή σύνδεσης μέσω της τέχνης ενώ αποκτούσαμε πραγματικές δημιουργικές και πρακτικές δεξιότητες.\n\n💬 Δείτε τι είπε ο Αυγουστής:\n\n«Πέρασα 10 υπέροχες μέρες στην Ιταλία μέσα από το πρόγραμμα Erasmus+ για τη συμμετοχική φωτογραφία. Εξερευνήσαμε την πόλη μέσα από εργαστήρια, ασχοληθήκαμε πρακτικά με τη φωτογραφία και γνωρίσαμε απίστευτους ανθρώπους που έγιναν φίλοι. Το αποκορύφωμα ήταν η φωτογραφική μας έκθεση όπου πολλοί ντόπιοι ήρθαν, έδειξαν ενδιαφέρον και μοιράστηκαν την εμπειρία μαζί μας. Πραγματικά μια ξεχωριστή εμπειρία.\"",
   },
   {
     title: "Food for Youth Connections",
